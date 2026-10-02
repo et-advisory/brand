@@ -1,0 +1,16 @@
+{
+  "name": "@et-advisory/brand",
+  "version": "1.0.0",
+  "description": "ET Advisory brand kit: tokens, Tailwind preset and mark shared by etadvisory.xyz and ETA Workspace.",
+  "type": "module",
+  "license": "UNLICENSED",
+  "repository": "github:et-advisory/brand",
+  "exports": {
+    "./brand.css": "./brand.css",
+    "./preset": "./preset.js",
+    "./eta-mark.svg": "./eta-mark.svg"
+  },
+  "files": ["brand.css", "preset.js", "eta-mark.svg", "BRAND.md"],
+  "scripts": { "test": "node check.mjs" },
+  "peerDependencies": { "tailwindcss": "^3.4" }
+}

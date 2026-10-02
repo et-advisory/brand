@@ -1,0 +1,57 @@
+/* @et-advisory/brand tokens. HSL triplets, consumed as hsl(var(--x)). Light only. */
+:root {
+  --background: 40 20% 98%;
+  --foreground: 228 15% 9%;
+  --card: 0 0% 100%;
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+
+  --primary: 215 85% 46%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 20% 95%;
+  --secondary-foreground: var(--foreground);
+  --muted: 220 15% 94%;
+  --muted-foreground: 220 10% 42%;
+  --accent: var(--primary);
+  --accent-foreground: var(--primary-foreground);
+  --destructive: 0 72% 48%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 220 14% 90%;
+  --input: 220 10% 58%;
+  --ring: var(--primary);
+  --radius: 0.5rem;
+
+  --eta-ink: var(--foreground);
+  --eta-accent: var(--primary);
+  --eta-accent-hover: 215 80% 41%;
+  --eta-accent-light: 215 85% 95%;
+  --eta-surface: 220 30% 97%;
+  --eta-muted-text: var(--muted-foreground);
+  --eta-border: var(--border);
+
+  /* ε Establish · τ Tokenize · α Activate. Decorative: never text on white. */
+  --eta-e: 358 90% 60%;
+  --eta-t: 142 70% 45%;
+  --eta-a: 215 90% 58%;
+  --eta-gold: 42 85% 55%;
+  --eta-heading-gradient: linear-gradient(135deg, hsl(230 80% 55%), hsl(192 80% 46%));
+
+  --eta-status-progress: 42 89% 93%;
+  --eta-status-progress-fg: 41 79% 30%;
+  --eta-status-active: 141 49% 91%;
+  --eta-status-active-fg: 143 56% 27%;
+  --eta-status-planned: 216 16% 94%;
+  --eta-status-planned-fg: var(--muted-foreground);
+  --eta-status-blocked: 0 70% 94%;
+  --eta-status-blocked-fg: 0 70% 38%;
+}
+
+@keyframes eta-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes eta-spin-reverse {
+  to { transform: rotate(-360deg); }
+}
