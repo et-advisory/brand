@@ -58,9 +58,9 @@ All tokens are HSL triplets in `brand.css`, used as `hsl(var(--token))` or throu
 | Hairline | `--border` | Dividers, card edges (decorative) |
 | ε τ α | `--eta-e`, `--eta-t`, `--eta-a` | Method illustrations and ambient motifs. Never text. |
 | Gold | `--eta-gold` | The mark and bullion illustrations |
-| Status | `--eta-status-{progress,active,planned,blocked}` + `-fg` | Chips only; always pair bg with its `-fg` |
+| Status | `--eta-status-{progress,info,active,planned,blocked}` + `-fg` | Chips only; always pair bg with its `-fg` |
 
-Status meaning: progress = pending or in review, active = live or approved, planned = draft or not started, blocked = rejected, failed or expired.
+Status meaning: progress = pending, in review or needs attention, info = in motion (submitted, in transit, committed), active = live, approved or agreed, planned = draft, not started or closed, blocked = rejected, failed or expired.
 Light only. A dark theme is one more block in `brand.css` when a toggle exists.
 
 ## Type

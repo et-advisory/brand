@@ -74,7 +74,7 @@ export default {
           [
             "ink", "accent", "accent-hover", "accent-light", "surface", "muted-text", "border",
             "e", "t", "a", "gold",
-            "status-progress", "status-progress-fg", "status-active", "status-active-fg",
+            "status-progress", "status-progress-fg", "status-active", "status-active-fg", "status-info", "status-info-fg",
             "status-planned", "status-planned-fg", "status-blocked", "status-blocked-fg",
           ].map((k) => [k, hsl(`eta-${k}`)]),
         ),

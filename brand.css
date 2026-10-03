@@ -42,6 +42,8 @@
   --eta-status-progress-fg: 41 79% 30%;
   --eta-status-active: 141 49% 91%;
   --eta-status-active-fg: 143 56% 27%;
+  --eta-status-info: var(--eta-accent-light);
+  --eta-status-info-fg: 215 85% 32%;
   --eta-status-planned: 216 16% 94%;
   --eta-status-planned-fg: var(--muted-foreground);
   --eta-status-blocked: 0 70% 94%;
