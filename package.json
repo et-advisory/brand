@@ -1,16 +1,19 @@
 {
-  "name": "@et-advisory/brand",
-  "version": "1.0.0",
-  "description": "ET Advisory brand kit: tokens, Tailwind preset and mark shared by etadvisory.xyz and ETA Workspace.",
-  "type": "module",
+  "name": "et-advisory",
+  "version": "0.2.0",
+  "private": true,
+  "description": "ET Advisory (ETA) brand system: design tokens, logo files, component references and brand book.",
   "license": "UNLICENSED",
-  "repository": "github:et-advisory/brand",
+  "type": "module",
   "exports": {
-    "./brand.css": "./brand.css",
-    "./preset": "./preset.js",
-    "./eta-mark.svg": "./eta-mark.svg"
+    "./tokens.json": "./tokens/tokens.json",
+    "./tokens.css": "./tokens/tokens.css",
+    "./logos/*": "./logos/*"
   },
-  "files": ["brand.css", "preset.js", "eta-mark.svg", "BRAND.md"],
-  "scripts": { "test": "node check.mjs" },
-  "peerDependencies": { "tailwindcss": "^3.4" }
+  "files": ["tokens", "logos", "components", "docs"],
+  "scripts": {
+    "build:tokens": "node scripts/build-tokens.mjs",
+    "build:logos": "python3 scripts/logo/generate.py",
+    "build": "npm run build:tokens && npm run build:logos"
+  }
 }

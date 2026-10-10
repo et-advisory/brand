@@ -1,0 +1,16 @@
+# StatTile
+
+StatTile is a card that leads with one big numeral, then a label and a source line.
+
+**The consumer provides** the figure, a label that says what it counts, and a source. Markup is `.tile` containing `.n`, `.l` and `.s`.
+
+**When to use.** To state one verified number in a row of two to four tiles on a page or slide.
+
+**Do**
+- Show the numeral in `accent` (it is 48px, which passes 3:1) and the label in `ink`.
+- Give every figure a source in `ink-muted` mono; nothing unsourced.
+- Keep the figures tabular.
+
+**Do not**
+- Do not invent statistics or fill a row with filler numbers; use the bracketed placeholder until the figure is verified.
+- Do not set the numeral smaller than 24px in `accent`; below that, use `accent-strong`.

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ET Advisory brand system</title>
+<link rel="icon" href="logos/eta-app-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens/tokens.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-sans);font-size:14px;line-height:1.5}
+header{display:flex;align-items:center;justify-content:space-between;gap:var(--space-5);padding:var(--space-6) var(--space-7);border-bottom:1px solid var(--line)}
+header img{height:56px;width:auto;display:block}
+header nav{display:flex;flex-wrap:wrap;gap:var(--space-4);font-size:14px;font-weight:600}
+a{color:var(--accent-strong)}
+main{max-width:1040px;margin:0 auto;padding:var(--space-7) var(--space-5)}
+h1{margin:0 0 var(--space-3);font-size:48px;font-weight:900;line-height:1.08;letter-spacing:-0.02em}
+.lead{margin:0 0 var(--space-7);font-size:18px;color:var(--ink-muted);max-width:640px}
+h2{margin:0;font-size:24px;font-weight:700}
+.eyebrow{margin:0 0 var(--space-2);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-strong)}
+section{margin-bottom:var(--space-8)}
+.sum{margin:var(--space-1) 0 var(--space-4);color:var(--ink-muted)}
+iframe{width:100%;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--paper)}
+.more{margin:var(--space-2) 0 0;font-size:12px}
+.logos{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:var(--space-4)}
+.logo{display:flex;flex-direction:column;gap:var(--space-3);align-items:center;justify-content:space-between;padding:var(--space-5);min-height:170px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);text-decoration:none}
+.logo.dark{background:var(--ink-band);border-color:var(--ink-band)}
+.logo img{max-width:100%;max-height:96px;margin:auto 0}
+.logo span{font-family:var(--font-mono);font-size:12px;color:var(--ink-muted)}
+.logo.dark span{color:var(--on-ink-band-muted)}
+@media (max-width:640px){header{flex-direction:column;align-items:flex-start;padding:var(--space-5)}h1{font-size:36px}}
+</style></head>
+<body>
+<header>
+<picture><source srcset="logos/eta-lockup-horizontal-reversed.svg" media="(prefers-color-scheme: dark)"><img src="logos/eta-lockup-horizontal.svg" alt="ET Advisory"></picture>
+<nav><a href="docs/BRAND.md">Brand book</a><a href="#logos">Logos</a><a href="#Button">Components</a><a href="tokens/tokens.json">Tokens</a></nav>
+</header>
+<main>
+<p class="eyebrow">Brand system</p>
+<h1>ET Advisory.</h1>
+<p class="lead">Tokens, logo files and component references for ETA. The logo is proposed and pending ratification. This page follows your system's light or dark setting.</p>
+<section id="logos"><h2>Logos</h2><p class="sum">Outlined SVG, no font dependency. Click a tile to download it.</p><div class="logos">
+<a class="logo" href="logos/eta-lockup-horizontal.svg" download><img src="logos/eta-lockup-horizontal.svg" alt="eta-lockup-horizontal.svg"><span>eta-lockup-horizontal.svg</span></a>
+<a class="logo" href="logos/eta-lockup-stacked.svg" download><img src="logos/eta-lockup-stacked.svg" alt="eta-lockup-stacked.svg"><span>eta-lockup-stacked.svg</span></a>
+<a class="logo" href="logos/eta-wordmark.svg" download><img src="logos/eta-wordmark.svg" alt="eta-wordmark.svg"><span>eta-wordmark.svg</span></a>
+<a class="logo" href="logos/eta-mark.svg" download><img src="logos/eta-mark.svg" alt="eta-mark.svg"><span>eta-mark.svg</span></a>
+<a class="logo" href="logos/eta-mark-mono-ink.svg" download><img src="logos/eta-mark-mono-ink.svg" alt="eta-mark-mono-ink.svg"><span>eta-mark-mono-ink.svg</span></a>
+<a class="logo" href="logos/eta-lockup-horizontal-mono-ink.svg" download><img src="logos/eta-lockup-horizontal-mono-ink.svg" alt="eta-lockup-horizontal-mono-ink.svg"><span>eta-lockup-horizontal-mono-ink.svg</span></a>
+<a class="logo dark" href="logos/eta-lockup-horizontal-reversed.svg" download><img src="logos/eta-lockup-horizontal-reversed.svg" alt="eta-lockup-horizontal-reversed.svg"><span>eta-lockup-horizontal-reversed.svg</span></a>
+<a class="logo dark" href="logos/eta-lockup-stacked-reversed.svg" download><img src="logos/eta-lockup-stacked-reversed.svg" alt="eta-lockup-stacked-reversed.svg"><span>eta-lockup-stacked-reversed.svg</span></a>
+<a class="logo dark" href="logos/eta-mark-reversed.svg" download><img src="logos/eta-mark-reversed.svg" alt="eta-mark-reversed.svg"><span>eta-mark-reversed.svg</span></a>
+<a class="logo dark" href="logos/eta-mark-mono-white.svg" download><img src="logos/eta-mark-mono-white.svg" alt="eta-mark-mono-white.svg"><span>eta-mark-mono-white.svg</span></a>
+<a class="logo dark" href="logos/eta-mark-ceremonial-gold.svg" download><img src="logos/eta-mark-ceremonial-gold.svg" alt="eta-mark-ceremonial-gold.svg"><span>eta-mark-ceremonial-gold.svg</span></a>
+<a class="logo" href="logos/eta-app-icon.svg" download><img src="logos/eta-app-icon.svg" alt="eta-app-icon.svg"><span>eta-app-icon.svg</span></a>
+</div></section>
+<section id="Cover"><h2>Cover</h2><p class="sum">The palette and pattern the system is remembered by.</p><iframe src="components/Cover/preview.html" style="height:336px" loading="lazy" title="Cover preview"></iframe></section>
+<section id="Logo"><h2>Logo</h2><p class="sum">Logo draws the proposed ETA mark (2026-10-09) and its lockups as inline SVG bound to the mark tokens, so the same markup works in both themes.
+
+**Status.** Proposed, pending ratification.</p><iframe src="components/Logo/preview.html" style="height:1200px" loading="lazy" title="Logo preview"></iframe><p class="more"><a href="components/Logo/README.md">Guidelines</a></p></section>
+<section id="BrandApplications"><h2>BrandApplications</h2><p class="sum">BrandApplications shows the logo at work on the business card, email signature and social profile, as reference layouts rather than a reusable component.
+
+**The consumer provides** the person's real name, title and contact lines; the preview shows placeholders and invents no one.
+
+**Business card** (3.5 x 2 in, 0.125 in bleed and safe margin): the front is full-bleed `ink-band` with the `ETA` wordmark top-left in `on-ink-band`, the reversed mark at two thirds of the card's width bleeding off the bottom-right corner (keep the apex and the meeting point of the faces on the card), and the domain bottom-left in `mono` `on-ink-band-muted`.</p><iframe src="components/BrandApplications/preview.html" style="height:760px" loading="lazy" title="BrandApplications preview"></iframe><p class="more"><a href="components/BrandApplications/README.md">Guidelines</a></p></section>
+<section id="Button"><h2>Button</h2><p class="sum">Button is the action control in seven variants (`primary`, `secondary`, `outline`, `ghost`, `link`, `inverse`, `onDark`) and three heights (32, 40, 48px).
+
+**The consumer provides** a label from the fixed call-to-action vocabulary (Initiate Contact, Explore our services, Get started, Learn About ETA, Continue) and an `href` or click handler.</p><iframe src="components/Button/preview.html" style="height:420px" loading="lazy" title="Button preview"></iframe><p class="more"><a href="components/Button/README.md">Guidelines</a></p></section>
+<section id="Badge"><h2>Badge</h2><p class="sum">Badge is a small pill that tags an item with a short word, in three tones: `neutral`, `accent` and `gold`.
+
+**The consumer provides** the label text (one to three words) and the tone.</p><iframe src="components/Badge/preview.html" style="height:170px" loading="lazy" title="Badge preview"></iframe><p class="more"><a href="components/Badge/README.md">Guidelines</a></p></section>
+<section id="StatusChip"><h2>StatusChip</h2><p class="sum">StatusChip shows the state of an item as a dot plus a word, in five tones: `neutral`, `info`, `success`, `pending` and `danger`.
+
+**The consumer provides** the status word and the tone.</p><iframe src="components/StatusChip/preview.html" style="height:170px" loading="lazy" title="StatusChip preview"></iframe><p class="more"><a href="components/StatusChip/README.md">Guidelines</a></p></section>
+<section id="StatTile"><h2>StatTile</h2><p class="sum">StatTile is a card that leads with one big numeral, then a label and a source line.
+
+**The consumer provides** the figure, a label that says what it counts, and a source.</p><iframe src="components/StatTile/preview.html" style="height:210px" loading="lazy" title="StatTile preview"></iframe><p class="more"><a href="components/StatTile/README.md">Guidelines</a></p></section>
+<section id="ServiceCard"><h2>ServiceCard</h2><p class="sum">ServiceCard presents one of ETA's three offerings as a numbered card; the row is always exactly three, numbered 01 to 03.
+
+**The consumer provides** the number (01, 02 or 03), a short title and one sentence.</p><iframe src="components/ServiceCard/preview.html" style="height:300px" loading="lazy" title="ServiceCard preview"></iframe><p class="more"><a href="components/ServiceCard/README.md">Guidelines</a></p></section>
+<section id="Eyebrow"><h2>Eyebrow</h2><p class="sum">Eyebrow is the small uppercase label that sits above a heading and names the section.
+
+**The consumer provides** one to four words.</p><iframe src="components/Eyebrow/preview.html" style="height:130px" loading="lazy" title="Eyebrow preview"></iframe><p class="more"><a href="components/Eyebrow/README.md">Guidelines</a></p></section>
+<section id="SectionHeading"><h2>SectionHeading</h2><p class="sum">SectionHeading pairs an Eyebrow, an `h2` headline and an optional lead paragraph.
+
+**The consumer provides** the eyebrow words, a headline that makes a claim, and optionally one lead sentence.</p><iframe src="components/SectionHeading/preview.html" style="height:250px" loading="lazy" title="SectionHeading preview"></iframe><p class="more"><a href="components/SectionHeading/README.md">Guidelines</a></p></section>
+</main></body></html>
