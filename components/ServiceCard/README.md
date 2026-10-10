@@ -2,7 +2,7 @@
 
 ServiceCard presents one of ETA's three offerings as a numbered card; the row is always exactly three, numbered 01 to 03.
 
-**The consumer provides** the number (01, 02 or 03), a short title and one sentence. Markup is a `.svc-grid` holding three `.svc` cards.
+**The consumer provides** the number (01, 02 or 03), a short title and one sentence. Render the set as `<ETA.ServiceRow />`, which always draws exactly three cards numbered 01 to 03 with the canonical offerings; pass `items` (exactly three `{title, description}`) only to reword them. `ETA.ServiceCard` renders one card.
 
 **When to use.** To show the offerings: entity architecture, capital formation, go-to-market activation. Nothing else belongs in this component.
 

@@ -1,56 +1,27 @@
-<!-- @dsCard group="Marketing" height=250 subtitle="Eyebrow, argument headline with a period, and a lead" -->
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><style>
-body{margin:0}
+<!-- @dsCard group="Marketing" height=160 subtitle="ETA.SectionHeading: eyebrow, argument headline with a period, and a lead" -->
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../bundle.css"><script src="../lib/react.production.min.js"></script><script src="../lib/react-dom.production.min.js"></script><script src="../bundle.js"></script><title>SectionHeading — preview</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><style>
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-sans);font-size:14px;line-height:1.5}
 *{box-sizing:border-box}
-.panel{background:var(--paper);color:var(--ink);font-family:var(--font-sans);font-size:14px;line-height:1.5;padding:var(--space-5)}
+#root{padding:var(--space-5)}
 .stack{display:flex;flex-direction:column;gap:var(--space-5)}
+.group{display:flex;flex-direction:column;gap:var(--space-2)}
 .row{display:flex;flex-wrap:wrap;gap:var(--space-4);align-items:center}
 .lbl{font-family:var(--font-mono);font-size:12px;font-weight:500;line-height:1.4;color:var(--ink-muted)}
-.on-ink{background:var(--ink);padding:var(--space-4);border-radius:var(--radius-lg)}
-/* Button: sizes 32, 40, 48 */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);border:1px solid transparent;border-radius:var(--radius-md);font-family:var(--font-sans);font-weight:600;line-height:1;white-space:nowrap;cursor:pointer;text-decoration:none}
-.btn:focus-visible{outline:2px solid var(--accent-strong);outline-offset:2px}
-.btn-32{height:32px;padding:0 var(--space-3);font-size:14px}
-.btn-40{height:40px;padding:0 var(--space-4);font-size:14px}
-.btn-48{height:48px;padding:0 var(--space-5);font-size:16px;font-weight:700}
-.btn-primary{background:var(--accent-fill);color:var(--on-accent)}
-.btn-secondary{background:var(--accent-tint);color:var(--accent-strong)}
-.btn-outline{background:transparent;border-color:var(--accent);color:var(--accent-strong)}
-.btn-ghost{background:transparent;color:var(--ink)}
-.btn-link{background:none;height:auto;padding:0;color:var(--accent-strong);text-decoration:underline;text-underline-offset:3px}
-.btn-inverse{background:var(--ink);color:var(--paper)}
-.btn-ondark{background:transparent;border-color:var(--paper);color:var(--paper)}
-/* Badge and StatusChip */
-.badge{display:inline-flex;align-items:center;height:24px;padding:0 var(--space-3);border-radius:var(--radius-pill);font-family:var(--font-sans);font-size:12px;font-weight:600;line-height:1}
-.badge-neutral{background:var(--surface);color:var(--ink-muted);border:1px solid var(--line)}
-.badge-accent{background:var(--accent-tint);color:var(--accent-strong)}
-.badge-gold{background:var(--gold);color:var(--on-gold)}
-.chip{display:inline-flex;align-items:center;gap:var(--space-2);height:28px;padding:0 var(--space-3);border-radius:var(--radius-sm);font-family:var(--font-sans);font-size:12px;font-weight:600;line-height:1}
-.chip::before{content:"";width:8px;height:8px;border-radius:var(--radius-pill);background:currentColor}
-.chip-neutral{background:var(--surface);color:var(--ink-muted);border:1px solid var(--line)}
-.chip-info{background:var(--accent-tint);color:var(--accent-strong)}
-.chip-success{background:var(--success-bg);color:var(--success)}
-.chip-pending{background:var(--warning-bg);color:var(--warning)}
-.chip-danger{background:var(--danger-bg);color:var(--danger)}
-/* StatTile */
-.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-5)}
-.tile{display:flex;flex-direction:column;gap:var(--space-2);background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--space-5)}
-.tile .n{font-size:48px;font-weight:900;line-height:1.08;letter-spacing:-0.02em;color:var(--accent);font-variant-numeric:tabular-nums}
-.tile .l{font-size:14px;font-weight:600;line-height:1.5;color:var(--ink)}
-.tile .s{font-family:var(--font-mono);font-size:12px;font-weight:500;line-height:1.4;color:var(--ink-muted)}
-/* ServiceCard: always three */
-.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-5)}
-.svc{display:flex;flex-direction:column;gap:var(--space-3);background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--space-5)}
-.svc .no{font-family:var(--font-mono);font-size:12px;font-weight:500;line-height:1.4;letter-spacing:0.08em;color:var(--accent-strong)}
-.svc h3{margin:0;font-size:24px;font-weight:700;line-height:1.2;color:var(--ink)}
-.svc p{margin:0;font-size:14px;line-height:1.5;color:var(--ink-muted)}
-/* Eyebrow and SectionHeading */
-.eyebrow{margin:0;font-family:var(--font-sans);font-size:12px;font-weight:600;line-height:1.2;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-strong)}
-.sh{display:flex;flex-direction:column;gap:var(--space-3);max-width:640px}
-.sh h2{margin:0;font-size:36px;font-weight:900;line-height:1.1;letter-spacing:-0.02em;color:var(--ink)}
-.sh p.lead{margin:0;font-size:18px;line-height:1.5;color:var(--ink-muted)}
-/* Logo placeholder */
-.logo-ph{display:inline-flex;align-items:center;font-family:var(--font-sans);font-size:24px;font-weight:800;line-height:1;letter-spacing:-0.02em;color:var(--ink)}
-.logo-ph.on-ink{color:var(--paper);padding:var(--space-4) var(--space-5)}
-.note{max-width:520px;margin:0;font-size:12px;line-height:1.4;color:var(--ink-muted)}
-</style></head><body><div class="panel"><div class="sh"><p class="eyebrow">Capital formation</p><h2>Tokenization is the instrument.</h2><p class="lead">The deliverable is a closed raise or a growth-exit strategy.</p></div></div></body></html>
+.band{background:var(--band-dark);padding:var(--space-4);border-radius:var(--radius-lg)}
+.band .lbl{color:var(--on-band-dark-muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--space-4)}
+</style></head>
+<body>
+<div id="root"></div>
+<script>
+var E = window.ETA, h = React.createElement;
+function G(label, child, cls) { return h("div", { className: "group" }, h("span", { className: "lbl" }, label), h("div", { className: cls || "row" }, child)); }
+
+ReactDOM.createRoot(document.getElementById("root")).render(h(E.SectionHeading, {
+  eyebrow: "Capital formation",
+  title: "Tokenization is the instrument.",
+  lead: "The deliverable is a closed raise or a growth-exit strategy."
+}));
+</script>
+</body></html>

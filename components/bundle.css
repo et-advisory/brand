@@ -1,0 +1,52 @@
+/* ET Advisory components. Every value comes from tokens.css; nothing here declares a token. */
+.eta-btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);border:1px solid transparent;border-radius:var(--radius-md);font-family:var(--font-sans);font-weight:600;line-height:1;white-space:nowrap;cursor:pointer;text-decoration:none;transition:filter .12s ease}
+.eta-btn:focus-visible{outline:2px solid var(--accent-strong);outline-offset:2px}
+.eta-btn:hover{filter:brightness(0.94)}
+.eta-btn:disabled{opacity:.5;cursor:not-allowed;filter:none}
+.eta-btn-32{height:32px;padding:0 var(--space-3);font-size:14px}
+.eta-btn-40{height:40px;padding:0 var(--space-4);font-size:14px}
+.eta-btn-48{height:48px;padding:0 var(--space-5);font-size:16px;font-weight:700}
+.eta-btn-primary{background:var(--accent-fill);color:var(--on-accent)}
+.eta-btn-secondary{background:var(--accent-tint);color:var(--accent-strong)}
+.eta-btn-outline{background:transparent;border-color:var(--accent);color:var(--accent-strong)}
+.eta-btn-ghost{background:transparent;color:var(--ink)}
+.eta-btn-ghost:hover{background:var(--surface);filter:none}
+.eta-btn-link{background:none;border:0;height:auto;padding:0;font-size:inherit;color:var(--accent-strong);text-decoration:underline;text-underline-offset:3px}
+.eta-btn-inverse{background:var(--ink);color:var(--paper)}
+.eta-btn-onDark{background:transparent;border-color:var(--on-band-dark);color:var(--on-band-dark)}
+.eta-btn-onDark:focus-visible{outline-color:var(--on-band-dark)}
+
+.eta-badge{display:inline-flex;align-items:center;height:24px;padding:0 var(--space-3);border-radius:var(--radius-pill);font-family:var(--font-sans);font-size:12px;font-weight:600;line-height:1;white-space:nowrap}
+.eta-badge-neutral{background:var(--surface);color:var(--ink-muted);border:1px solid var(--line)}
+.eta-badge-accent{background:var(--accent-tint);color:var(--accent-strong)}
+.eta-badge-gold{background:var(--gold);color:var(--on-gold)}
+
+.eta-chip{display:inline-flex;align-items:center;gap:var(--space-2);height:28px;padding:0 var(--space-3);border-radius:var(--radius-sm);font-family:var(--font-sans);font-size:12px;font-weight:600;line-height:1;white-space:nowrap}
+.eta-chip::before{content:"";width:8px;height:8px;border-radius:var(--radius-pill);background:currentColor;flex:none}
+.eta-chip-neutral{background:var(--surface);color:var(--ink-muted);border:1px solid var(--line)}
+.eta-chip-info{background:var(--accent-tint);color:var(--accent-strong)}
+.eta-chip-success{background:var(--success-bg);color:var(--success)}
+.eta-chip-pending{background:var(--warning-bg);color:var(--warning)}
+.eta-chip-danger{background:var(--danger-bg);color:var(--danger)}
+
+.eta-row{display:grid;grid-template-columns:repeat(var(--eta-cols,3),minmax(0,1fr));gap:var(--space-5)}
+@media (max-width:640px){.eta-row{grid-template-columns:1fr}}
+
+.eta-stat{display:flex;flex-direction:column;gap:var(--space-2);background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--space-5);font-family:var(--font-sans)}
+.eta-stat-value{font-size:48px;font-weight:900;line-height:1.08;letter-spacing:-0.02em;color:var(--accent);font-variant-numeric:tabular-nums}
+.eta-stat-label{font-size:14px;font-weight:600;line-height:1.5;color:var(--ink)}
+.eta-stat-source{font-family:var(--font-mono);font-size:12px;font-weight:500;line-height:1.4;color:var(--ink-muted)}
+
+.eta-svc{display:flex;flex-direction:column;gap:var(--space-3);background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--space-5);font-family:var(--font-sans)}
+.eta-svc-no{font-family:var(--font-mono);font-size:12px;font-weight:500;line-height:1.4;letter-spacing:0.08em;color:var(--accent-strong)}
+.eta-svc-title{margin:0;font-size:24px;font-weight:700;line-height:1.2;color:var(--ink)}
+.eta-svc-body{margin:0;font-size:14px;line-height:1.5;color:var(--ink-muted)}
+
+.eta-eyebrow{margin:0;font-family:var(--font-sans);font-size:12px;font-weight:600;line-height:1.2;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-strong)}
+.eta-eyebrow-slide{font-size:24px}
+.eta-sh{display:flex;flex-direction:column;gap:var(--space-3);max-width:640px;font-family:var(--font-sans)}
+.eta-sh-center{align-items:center;text-align:center;margin-left:auto;margin-right:auto}
+.eta-sh-title{margin:0;font-size:36px;font-weight:900;line-height:1.1;letter-spacing:-0.02em;color:var(--ink)}
+.eta-sh-lead{margin:0;font-size:18px;line-height:1.5;color:var(--ink-muted)}
+
+.eta-logo{overflow:visible}

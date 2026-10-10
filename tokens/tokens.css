@@ -30,9 +30,9 @@
   --mark-reversed-light: #b7d4fb;
   --mark-reversed-mid: #6aa5f7;
   --mark-reversed-deep: #1d73ed;
-  --ink-band: #14151a;
-  --on-ink-band: #f4f4f2;
-  --on-ink-band-muted: #b8bac2;
+  --band-dark: #14151a;
+  --on-band-dark: #f4f4f2;
+  --on-band-dark-muted: #b8bac2;
   --gold-light: #f6d27a;
   --gold-deep: #a8761a;
 
@@ -89,9 +89,9 @@
     --mark-reversed-light: #b7d4fb;
     --mark-reversed-mid: #6aa5f7;
     --mark-reversed-deep: #1d73ed;
-    --ink-band: #2a2e3b;
-    --on-ink-band: #f4f4f2;
-    --on-ink-band-muted: #b8bac2;
+    --band-dark: #2a2e3b;
+    --on-band-dark: #f4f4f2;
+    --on-band-dark-muted: #b8bac2;
     --gold-light: #f6d27a;
     --gold-deep: #a8761a;
   }
@@ -127,9 +127,9 @@
   --mark-reversed-light: #b7d4fb;
   --mark-reversed-mid: #6aa5f7;
   --mark-reversed-deep: #1d73ed;
-  --ink-band: #2a2e3b;
-  --on-ink-band: #f4f4f2;
-  --on-ink-band-muted: #b8bac2;
+  --band-dark: #2a2e3b;
+  --on-band-dark: #f4f4f2;
+  --on-band-dark-muted: #b8bac2;
   --gold-light: #f6d27a;
   --gold-deep: #a8761a;
 }

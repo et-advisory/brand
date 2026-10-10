@@ -4,9 +4,11 @@ Logo draws the proposed ETA mark (2026-10-09) and its lockups as inline SVG boun
 
 **Status.** Proposed, pending ratification. It replaces the plain-type placeholder and settles the triangle direction under review in favor of the dimensional tetrahedron. The legacy marks (`eta-logo.png`, `eta-mark.svg`, the four-glyph Logo in the Claude Design project) are retired once this is ratified.
 
-**The consumer provides** the ground and picks the colourway to match it: `paper`, `surface` or `card` take the full-color mark (`mark-facet-*`, type in `ink`); `ink-band` takes the reversed mark (`mark-reversed-*`, type in `on-ink-band`); an `accent` fill takes the one-color mark in `on-accent`. For files, use the SVGs in the Logos asset group rather than redrawing.
+**Usage.** `<ETA.Logo variant="horizontal" tone="color" width={200} />`. `variant` is `horizontal`, `stacked`, `mark` or `wordmark`; `tone` is `color`, `reversed`, `mono`, `monoReversed`, `onAccent` or `gold`; `width` sets the size and the height follows.
 
-**Variants.** Horizontal lockup (primary), stacked lockup, wordmark, mark. Colourways: full color, reversed, one color, ceremonial gold (ink-band only).
+**The consumer provides** the ground and picks the tone to match it: `paper`, `surface` or `card` take the full-color mark (`mark-facet-*`, type in `ink`); `band-dark` takes the reversed mark (`mark-reversed-*`, type in `on-band-dark`); an `accent` fill takes the one-color mark in `on-accent`. For files, use the SVGs in the Logos asset group rather than redrawing.
+
+**Variants.** Horizontal lockup (primary), stacked lockup, wordmark, mark. Colourways: full color, reversed, one color, ceremonial gold (band-dark only).
 
 **Do**
 - Keep clear space of one third of the mark's height on every side.

@@ -3,7 +3,7 @@ ET Advisory (ETA) helps founders and asset owners close capital raises, with a f
 ## Principles
 
 - **One accent.** `accent` (Royal Blue) is the only brand hue on marketing and proposal surfaces. Fills, big numerals and links at 24px and up use `accent`; text under 24px uses `accent-strong`; a fill behind white text under 24px (buttons) uses `accent-fill`.
-- **Gold pairs with silver, not with blue.** `gold` appears only for bullion and ceremonial moments (the gold Badge tone, the ceremonial gold mark on `ink-band`); text on a gold fill is `on-gold`. Do not place it beside `accent` (decision recorded 2026-10-06).
+- **Gold pairs with silver, not with blue.** `gold` appears only for bullion and ceremonial moments (the gold Badge tone, the ceremonial gold mark on `band-dark`); text on a gold fill is `on-gold`. Do not place it beside `accent` (decision recorded 2026-10-06).
 - **The mark is blue, lit from the left.** The proposed mark (2026-10-09) colors its three faces `mark-facet-light`, `mark-facet-mid` and `mark-facet-deep`, and nothing else uses those three. `letter-e`, `letter-t` and `letter-a` are legacy: the new mark does not use them; keep them for older material until the logo is ratified.
 - **Paper, not white.** Backgrounds are `paper`; cards are `card`; bands are `surface`; rules are `line`. Always set a section background explicitly.
 - **Seven module hues belong to ERA.** Do not import them into client-facing ETA collateral.
@@ -25,7 +25,7 @@ ET Advisory (ETA) helps founders and asset owners close capital raises, with a f
 
 ## Components
 
-`Cover` shows the palette. `Button` has seven variants (`primary`, `secondary`, `outline`, `ghost`, `link`, `inverse`, `onDark`) at 32, 40 and 48px. `Badge` (neutral, accent, gold) and `StatusChip` carry tone with a word. `StatTile` is a big numeral over a label and source. `ServiceCard` is always exactly three, numbered 01 to 03. `Eyebrow` and `SectionHeading` open every section. `Logo` draws the proposed mark and lockups from tokens, so it switches theme on its own. `BrandApplications` shows the mark at work: business card, email signature, social avatar and banner.
+The components are live React parts in the `ETA` namespace (`components/bundle.js`, styled by `components/bundle.css`, typed in `components/index.d.ts`): `ETA.Logo`, `ETA.Button`, `ETA.Badge`, `ETA.StatusChip`, `ETA.StatTile` with `ETA.StatRow`, `ETA.ServiceCard` with `ETA.ServiceRow`, `ETA.Eyebrow` and `ETA.SectionHeading`. Use them rather than re-creating their markup. `Cover` shows the palette. `Button` has seven variants (`primary`, `secondary`, `outline`, `ghost`, `link`, `inverse`, `onDark`) at 32, 40 and 48px. `Badge` (neutral, accent, gold) and `StatusChip` carry tone with a word. `StatTile` is a big numeral over a label and source. `ServiceCard` is always exactly three, numbered 01 to 03. `Eyebrow` and `SectionHeading` open every section. `Logo` draws the proposed mark and lockups from tokens, so it switches theme on its own. `BrandApplications` is a static reference layout, not a component: business card, email signature, social avatar and banner.
 
 ## Logo (proposed 2026-10-09, pending ratification)
 
@@ -37,9 +37,9 @@ ET Advisory (ETA) helps founders and asset owners close capital raises, with a f
 
 **Color.**
 - On `paper`, `surface` or `card`: faces `mark-facet-light`, `mark-facet-mid`, `mark-facet-deep`; type in `ink`.
-- On `ink-band` or a dark photo: faces `mark-reversed-light`, `mark-reversed-mid`, `mark-reversed-deep`; type in `on-ink-band`.
-- One color: all `ink`, all `on-ink-band`, or all `on-accent` on an `accent` fill. The channels carry the form.
-- Ceremonial: `gold-light`, `gold`, `gold-deep` on `ink-band` only, for bullion clients and seals. Never beside blue.
+- On `band-dark` or a dark photo: faces `mark-reversed-light`, `mark-reversed-mid`, `mark-reversed-deep`; type in `on-band-dark`.
+- One color: all `ink`, all `on-band-dark`, or all `on-accent` on an `accent` fill. The channels carry the form.
+- Ceremonial: `gold-light`, `gold`, `gold-deep` on `band-dark` only, for bullion clients and seals. Never beside blue.
 
 **Clear space and size.** Clear space x = one third of the mark's height on every side. Minimum: horizontal lockup 160px or 40mm wide, stacked 72px, mark 16px (one color under 24px).
 

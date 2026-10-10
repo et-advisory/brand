@@ -2,7 +2,7 @@
 
 StatusChip shows the state of an item as a dot plus a word, in five tones: `neutral`, `info`, `success`, `pending` and `danger`.
 
-**The consumer provides** the status word and the tone. Markup is `<span class="chip chip-<tone>">`; the dot is drawn by the stylesheet.
+**The consumer provides** the status word and the tone. Render it as `<ETA.StatusChip tone="pending">Awaiting counsel</ETA.StatusChip>`; the dot is drawn by the stylesheet.
 
 **When to use.** For deal, task and document state in tables and cards. The state must be one that can change; use Badge for a fixed category.
 

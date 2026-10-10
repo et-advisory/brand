@@ -2,7 +2,7 @@
 
 StatTile is a card that leads with one big numeral, then a label and a source line.
 
-**The consumer provides** the figure, a label that says what it counts, and a source. Markup is `.tile` containing `.n`, `.l` and `.s`.
+**The consumer provides** the figure, a label that says what it counts, and a source. Render it as `<ETA.StatTile value="3" label="Service lines" source="ETA offerings" />` inside an `ETA.StatRow`, which lays out two to four tiles. Leave `value` out to show the `[00]` placeholder; the source line always shows, reading `[add before use]` until one is given.
 
 **When to use.** To state one verified number in a row of two to four tiles on a page or slide.
 

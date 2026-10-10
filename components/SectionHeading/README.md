@@ -2,7 +2,7 @@
 
 SectionHeading pairs an Eyebrow, an `h2` headline and an optional lead paragraph.
 
-**The consumer provides** the eyebrow words, a headline that makes a claim, and optionally one lead sentence. Markup is `.sh` containing `p.eyebrow`, `h2` and `p.lead`.
+**The consumer provides** the eyebrow words, a headline that makes a claim, and optionally one lead sentence. Render it as `<ETA.SectionHeading eyebrow="Capital formation" title="Tokenization is the instrument." lead="…" />`; `level` sets the heading tag (default `h2`) and `align="center"` centers it.
 
 **When to use.** To open every page section or slide section. One per section.
 

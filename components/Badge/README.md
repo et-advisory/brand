@@ -2,7 +2,7 @@
 
 Badge is a small pill that tags an item with a short word, in three tones: `neutral`, `accent` and `gold`.
 
-**The consumer provides** the label text (one to three words) and the tone. Markup is `<span class="badge badge-<tone>">`.
+**The consumer provides** the label text (one to three words) and the tone. Render it as `<ETA.Badge tone="accent">Proposal sent</ETA.Badge>`.
 
 **When to use.** To tag a category or instrument (for example Ounce-Backed) on a card, table row or heading. Use StatusChip, not Badge, for a state that moves (done, pending, blocked).
 

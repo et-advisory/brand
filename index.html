@@ -22,10 +22,10 @@ iframe{width:100%;border:1px solid var(--line);border-radius:var(--radius-lg);ba
 .more{margin:var(--space-2) 0 0;font-size:12px}
 .logos{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:var(--space-4)}
 .logo{display:flex;flex-direction:column;gap:var(--space-3);align-items:center;justify-content:space-between;padding:var(--space-5);min-height:170px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);text-decoration:none}
-.logo.dark{background:var(--ink-band);border-color:var(--ink-band)}
+.logo.dark{background:var(--band-dark);border-color:var(--band-dark)}
 .logo img{max-width:100%;max-height:96px;margin:auto 0}
 .logo span{font-family:var(--font-mono);font-size:12px;color:var(--ink-muted)}
-.logo.dark span{color:var(--on-ink-band-muted)}
+.logo.dark span{color:var(--on-band-dark-muted)}
 @media (max-width:640px){header{flex-direction:column;align-items:flex-start;padding:var(--space-5)}h1{font-size:36px}}
 </style></head>
 <body>
@@ -36,7 +36,7 @@ iframe{width:100%;border:1px solid var(--line);border-radius:var(--radius-lg);ba
 <main>
 <p class="eyebrow">Brand system</p>
 <h1>ET Advisory.</h1>
-<p class="lead">Tokens, logo files and component references for ETA. The logo is proposed and pending ratification. This page follows your system's light or dark setting.</p>
+<p class="lead">Tokens, logo files and live React components for ETA. The logo is proposed and pending ratification. This page follows your system's light or dark setting.</p>
 <section id="logos"><h2>Logos</h2><p class="sum">Outlined SVG, no font dependency. Click a tile to download it.</p><div class="logos">
 <a class="logo" href="logos/eta-lockup-horizontal.svg" download><img src="logos/eta-lockup-horizontal.svg" alt="eta-lockup-horizontal.svg"><span>eta-lockup-horizontal.svg</span></a>
 <a class="logo" href="logos/eta-lockup-stacked.svg" download><img src="logos/eta-lockup-stacked.svg" alt="eta-lockup-stacked.svg"><span>eta-lockup-stacked.svg</span></a>
@@ -59,26 +59,26 @@ iframe{width:100%;border:1px solid var(--line);border-radius:var(--radius-lg);ba
 
 **The consumer provides** the person's real name, title and contact lines; the preview shows placeholders and invents no one.
 
-**Business card** (3.5 x 2 in, 0.125 in bleed and safe margin): the front is full-bleed `ink-band` with the `ETA` wordmark top-left in `on-ink-band`, the reversed mark at two thirds of the card's width bleeding off the bottom-right corner (keep the apex and the meeting point of the faces on the card), and the domain bottom-left in `mono` `on-ink-band-muted`.</p><iframe src="components/BrandApplications/preview.html" style="height:760px" loading="lazy" title="BrandApplications preview"></iframe><p class="more"><a href="components/BrandApplications/README.md">Guidelines</a></p></section>
+**Business card** (3.5 x 2 in, 0.125 in bleed and safe margin): the front is full-bleed `band-dark` with the `ETA` wordmark top-left in `on-band-dark`, the reversed mark at two thirds of the card's width bleeding off the bottom-right corner (keep the apex and the meeting point of the faces on the card), and the domain bottom-left in `mono` `on-band-dark-muted`.</p><iframe src="components/BrandApplications/preview.html" style="height:760px" loading="lazy" title="BrandApplications preview"></iframe><p class="more"><a href="components/BrandApplications/README.md">Guidelines</a></p></section>
 <section id="Button"><h2>Button</h2><p class="sum">Button is the action control in seven variants (`primary`, `secondary`, `outline`, `ghost`, `link`, `inverse`, `onDark`) and three heights (32, 40, 48px).
 
-**The consumer provides** a label from the fixed call-to-action vocabulary (Initiate Contact, Explore our services, Get started, Learn About ETA, Continue) and an `href` or click handler.</p><iframe src="components/Button/preview.html" style="height:420px" loading="lazy" title="Button preview"></iframe><p class="more"><a href="components/Button/README.md">Guidelines</a></p></section>
+**The consumer provides** a label from the fixed call-to-action vocabulary (Initiate Contact, Explore our services, Get started, Learn About ETA, Continue) and an `href` or click handler.</p><iframe src="components/Button/preview.html" style="height:580px" loading="lazy" title="Button preview"></iframe><p class="more"><a href="components/Button/README.md">Guidelines</a></p></section>
 <section id="Badge"><h2>Badge</h2><p class="sum">Badge is a small pill that tags an item with a short word, in three tones: `neutral`, `accent` and `gold`.
 
-**The consumer provides** the label text (one to three words) and the tone.</p><iframe src="components/Badge/preview.html" style="height:170px" loading="lazy" title="Badge preview"></iframe><p class="more"><a href="components/Badge/README.md">Guidelines</a></p></section>
+**The consumer provides** the label text (one to three words) and the tone.</p><iframe src="components/Badge/preview.html" style="height:200px" loading="lazy" title="Badge preview"></iframe><p class="more"><a href="components/Badge/README.md">Guidelines</a></p></section>
 <section id="StatusChip"><h2>StatusChip</h2><p class="sum">StatusChip shows the state of an item as a dot plus a word, in five tones: `neutral`, `info`, `success`, `pending` and `danger`.
 
-**The consumer provides** the status word and the tone.</p><iframe src="components/StatusChip/preview.html" style="height:170px" loading="lazy" title="StatusChip preview"></iframe><p class="more"><a href="components/StatusChip/README.md">Guidelines</a></p></section>
+**The consumer provides** the status word and the tone.</p><iframe src="components/StatusChip/preview.html" style="height:210px" loading="lazy" title="StatusChip preview"></iframe><p class="more"><a href="components/StatusChip/README.md">Guidelines</a></p></section>
 <section id="StatTile"><h2>StatTile</h2><p class="sum">StatTile is a card that leads with one big numeral, then a label and a source line.
 
 **The consumer provides** the figure, a label that says what it counts, and a source.</p><iframe src="components/StatTile/preview.html" style="height:210px" loading="lazy" title="StatTile preview"></iframe><p class="more"><a href="components/StatTile/README.md">Guidelines</a></p></section>
 <section id="ServiceCard"><h2>ServiceCard</h2><p class="sum">ServiceCard presents one of ETA's three offerings as a numbered card; the row is always exactly three, numbered 01 to 03.
 
-**The consumer provides** the number (01, 02 or 03), a short title and one sentence.</p><iframe src="components/ServiceCard/preview.html" style="height:300px" loading="lazy" title="ServiceCard preview"></iframe><p class="more"><a href="components/ServiceCard/README.md">Guidelines</a></p></section>
+**The consumer provides** the number (01, 02 or 03), a short title and one sentence.</p><iframe src="components/ServiceCard/preview.html" style="height:270px" loading="lazy" title="ServiceCard preview"></iframe><p class="more"><a href="components/ServiceCard/README.md">Guidelines</a></p></section>
 <section id="Eyebrow"><h2>Eyebrow</h2><p class="sum">Eyebrow is the small uppercase label that sits above a heading and names the section.
 
-**The consumer provides** one to four words.</p><iframe src="components/Eyebrow/preview.html" style="height:130px" loading="lazy" title="Eyebrow preview"></iframe><p class="more"><a href="components/Eyebrow/README.md">Guidelines</a></p></section>
+**The consumer provides** one to four words.</p><iframe src="components/Eyebrow/preview.html" style="height:160px" loading="lazy" title="Eyebrow preview"></iframe><p class="more"><a href="components/Eyebrow/README.md">Guidelines</a></p></section>
 <section id="SectionHeading"><h2>SectionHeading</h2><p class="sum">SectionHeading pairs an Eyebrow, an `h2` headline and an optional lead paragraph.
 
-**The consumer provides** the eyebrow words, a headline that makes a claim, and optionally one lead sentence.</p><iframe src="components/SectionHeading/preview.html" style="height:250px" loading="lazy" title="SectionHeading preview"></iframe><p class="more"><a href="components/SectionHeading/README.md">Guidelines</a></p></section>
+**The consumer provides** the eyebrow words, a headline that makes a claim, and optionally one lead sentence.</p><iframe src="components/SectionHeading/preview.html" style="height:160px" loading="lazy" title="SectionHeading preview"></iframe><p class="more"><a href="components/SectionHeading/README.md">Guidelines</a></p></section>
 </main></body></html>
