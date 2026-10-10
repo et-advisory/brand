@@ -2,6 +2,7 @@
 
 ## 2026-10-10 (later)
 
+- Tailwind 3 preset at `@et-advisory/brand/preset`, rebuilt on the v2 tokens; replaces the v1 HSL preset.
 - Components are now live React parts in the `ETA` namespace: `Logo`, `Button`, `Badge`, `StatusChip`, `StatTile` with `StatRow`, `ServiceCard` with `ServiceRow`, `Eyebrow`, `SectionHeading`. Added `components/bundle.js`, `bundle.css`, `index.d.ts` and React 18.3.1 in `components/lib/`.
 - Renamed `ink-band`, `on-ink-band`, `on-ink-band-muted` to `band-dark`, `on-band-dark`, `on-band-dark-muted`; values unchanged.
 - `onDark` buttons now use `on-band-dark` for border and label.

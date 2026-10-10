@@ -1,6 +1,6 @@
 {
   "name": "et-advisory",
-  "version": "0.3.0",
+  "version": "2.1.0",
   "private": true,
   "description": "ET Advisory (ETA) brand system: design tokens, logo files, live React components and brand book.",
   "license": "UNLICENSED",
@@ -11,18 +11,28 @@
     "./logos/*": "./logos/*",
     "./components/bundle.js": "./components/bundle.js",
     "./components/bundle.css": "./components/bundle.css",
-    "./components/index.d.ts": "./components/index.d.ts"
+    "./components/index.d.ts": "./components/index.d.ts",
+    "./preset": "./preset.js"
   },
   "files": [
     "tokens",
     "logos",
     "components",
-    "docs"
+    "docs",
+    "preset.js"
   ],
   "scripts": {
     "build:tokens": "node scripts/build-tokens.mjs",
     "build:logos": "python3 scripts/logo/generate.py",
     "build": "npm run build:tokens && npm run build:logos"
   },
-  "types": "./components/index.d.ts"
+  "types": "./components/index.d.ts",
+  "peerDependencies": {
+    "tailwindcss": "^3.4"
+  },
+  "peerDependenciesMeta": {
+    "tailwindcss": {
+      "optional": true
+    }
+  }
 }

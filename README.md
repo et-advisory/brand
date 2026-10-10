@@ -48,6 +48,24 @@ Key contrast rules (full detail in the brand book):
 - `band-dark` is a background that stays dark in both themes; text on it is `on-band-dark` or `on-band-dark-muted`.
 - `gold` never sits beside blue.
 
+## Using Tailwind
+
+`preset.js` maps the tokens onto shadcn-style names (`bg-primary`, `text-muted-foreground`, `border-border`) plus `eta-*`, `success`, `warning` and `danger`, with `/opacity` modifiers. It also sets body, borders, reduced motion and the `eta-grid-field`, `eta-bloom` and `eta-spin` motifs. Tailwind 3.4.
+
+```css
+@import "@et-advisory/brand/tokens.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+```ts
+import brand from "@et-advisory/brand/preset";
+export default { presets: [brand], content: ["./src/**/*.{ts,tsx}"] };
+```
+
+Blue text (`text-primary`, `text-eta-accent`) resolves to `accent-strong`; blue fills resolve to `accent-fill`.
+
 ## Using the components
 
 ```html
