@@ -51,7 +51,7 @@ export default {
   theme: {
     container: { center: true, padding: "2rem", screens: { "2xl": "1400px" } },
     extend: {
-      fontFamily: { sans: ["var(--font-sans)"], mono: ["var(--font-mono)"] },
+      fontFamily: { sans: ["var(--font-sans)"], serif: ["var(--font-serif)"], mono: ["var(--font-mono)"] },
       fontSize: {
         "2xs": ["10px", { lineHeight: "14px" }],
         eyebrow: ["12px", { lineHeight: "1.2", letterSpacing: "0.18em", fontWeight: "600" }],
