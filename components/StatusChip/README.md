@@ -13,3 +13,4 @@ StatusChip shows the state of an item as a dot plus a word, in five tones: `neut
 **Do not**
 - Do not invent new tones. The source system has eight tone pairs (neutral, info, pending, warn, agreed, success, danger, done); only the three status colors and the accent have tokens here, so `warn`, `agreed` and `done` fold into `pending` and `success` until they are tokenized.
 - Do not put chips on a colored fill; they sit on `paper`, `surface` or `card`.
+- `success` is a green close to Emerald: always keep the word and the dot, and do not use a `success` chip beside an `accent` button to mean the same thing.

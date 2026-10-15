@@ -35,10 +35,10 @@
 .eta-stat{display:flex;flex-direction:column;gap:var(--space-2);background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--space-5);font-family:var(--font-sans)}
 .eta-stat-value{font-size:48px;font-weight:900;line-height:1.08;letter-spacing:-0.02em;color:var(--accent);font-variant-numeric:tabular-nums}
 .eta-stat-label{font-size:14px;font-weight:600;line-height:1.5;color:var(--ink)}
-.eta-stat-source{font-family:var(--font-mono);font-size:12px;font-weight:500;line-height:1.4;color:var(--ink-muted)}
+.eta-stat-source{font-family:var(--font-mono);font-variant-numeric:tabular-nums;font-size:12px;font-weight:500;line-height:1.4;color:var(--ink-muted)}
 
 .eta-svc{display:flex;flex-direction:column;gap:var(--space-3);background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--space-5);font-family:var(--font-sans)}
-.eta-svc-no{font-family:var(--font-mono);font-size:12px;font-weight:500;line-height:1.4;letter-spacing:0.08em;color:var(--accent-strong)}
+.eta-svc-no{font-family:var(--font-mono);font-variant-numeric:tabular-nums;font-size:12px;font-weight:500;line-height:1.4;letter-spacing:0.08em;color:var(--accent-strong)}
 .eta-svc-title{margin:0;font-size:24px;font-weight:700;line-height:1.2;color:var(--ink)}
 .eta-svc-body{margin:0;font-size:14px;line-height:1.5;color:var(--ink-muted)}
 

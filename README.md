@@ -2,9 +2,9 @@
 
 The brand system for ET Advisory (ETA): design tokens, logo files, component references and the brand book.
 
-ET Advisory helps founders and asset owners close capital raises, with a focus on real-world asset tokenization. The look is confident, bright and precise: warm paper, near-black ink, one Royal Blue accent, heavy Inter headlines.
+ET Advisory helps founders and asset owners close capital raises, with a focus on real-world asset tokenization. The look is confident, bright and precise: warm paper, near-black ink, Emerald as the interface accent, Obsidian as the dark ground, Sapphire for the digital layer, Silver and Gold as metals, heavy Inter headlines.
 
-> **Logo status.** The faceted tetrahedron mark is proposed (2026-10-09) and pending ratification. Until it is ratified, treat the files in `logos/` as the working version.
+> **Canon.** Brand Evolution 13 (2026-10-14) replaces the Royal Blue direction. The mark is a three-face crystal: Ruby left, Sapphire right, Emerald bottom.
 
 ## What is here
 
@@ -13,7 +13,7 @@ ET Advisory helps founders and asset owners close capital raises, with a focus o
 | `docs/BRAND.md` | The brand book: principles, voice, visual foundations, logo rules, iconography. Start here. |
 | `tokens/tokens.json` | Source of truth: colors in light and dark themes, type scale, spacing, radius, each with a usage note. |
 | `tokens/tokens.css` | Generated CSS custom properties and `.t-*` type classes. Do not edit by hand. |
-| `logos/` | 12 SVG logo files and a 512px PNG app icon, all outlined paths. Usage notes in `logos/README.md`. |
+| `logos/` | SVG logo files, PNG exports and a 512px app icon, all outlined paths. Usage notes in `logos/README.md`. |
 | `components/bundle.js` | The live components: one classic script that sets `window.ETA`. Styled by `components/bundle.css`, typed in `components/index.d.ts`. |
 | `components/lib/` | React and ReactDOM 18.3.1 (UMD), which the bundle needs. |
 | `components/<Name>/` | Guidelines (`README.md`) and a standalone `preview.html` for each component. |
@@ -43,10 +43,10 @@ The dark theme follows `prefers-color-scheme`. To force a theme, set `data-theme
 
 Key contrast rules (full detail in the brand book):
 
-- Small white text sits on `accent-fill` (4.63:1), not on `accent` (4.44:1, 24px and up or bold only).
-- Text under 24px in blue uses `accent-strong`.
+- Small white text sits on `accent-fill` (6.91:1); since Evolution 12 `accent` equals it.
+- Text under 24px in Emerald uses `accent-strong`. `digital` (Sapphire) marks only tokens, rights and principle numerals.
 - `band-dark` is a background that stays dark in both themes; text on it is `on-band-dark` or `on-band-dark-muted`.
-- `gold` never sits beside blue.
+- `ruby` appears only in the mark. `gold` never sits beside the three-color mark.
 
 ## Using Tailwind
 
@@ -64,7 +64,7 @@ import brand from "@et-advisory/brand/preset";
 export default { presets: [brand], content: ["./src/**/*.{ts,tsx}"] };
 ```
 
-Blue text (`text-primary`, `text-eta-accent`) resolves to `accent-strong`; blue fills resolve to `accent-fill`.
+Emerald text (`text-primary`, `text-eta-accent`) resolves to `accent-strong`; Emerald fills resolve to `accent-fill`. `eta-digital`, `eta-sapphire`, `eta-emerald`, `eta-ruby`, `eta-white`, `eta-obsidian`, `eta-silver` and `eta-gold-canon` carry the canon swatches.
 
 ## Using the components
 
@@ -108,6 +108,6 @@ Full prop types are in `components/index.d.ts`; rules for each are in its `READM
 
 ## Open decisions
 
-The base spacing unit (4px here, 8px in the Style Guide), whether Instrument Serif and IBM Plex Mono are adopted, and ratifying the proposed logo.
+The base spacing unit (4px here, 8px in the Style Guide), whether Instrument Serif and IBM Plex Mono are adopted, and whether the Sage wireframe weight needs a token.
 
 All rights reserved, ET Advisory.
