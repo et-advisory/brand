@@ -87,6 +87,12 @@ export default {
           t: c("letter-t"),
           a: c("letter-a"),
           gold: c("gold"),
+          digital: c("digital"),
+          sapphire: c("sapphire"),
+          emerald: c("emerald"),
+          ruby: c("ruby"),
+          forest: c("forest"),
+          sage: c("sage"),
           "status-progress": c("warning-bg"),
           "status-progress-fg": c("warning"),
           "status-active": c("success-bg"),
@@ -99,7 +105,7 @@ export default {
           "status-blocked-fg": c("danger"),
         },
       },
-      // Blue text under 24px must be accent-strong for contrast.
+      // Emerald text under 24px must be accent-strong for contrast.
       textColor: {
         primary: { DEFAULT: c("accent-strong") },
         eta: { accent: c("accent-strong") },

@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.0.0 (2026-10-15)
+
+Brand Evolution 12 is the canon. Replaces Royal Blue (v2).
+
+- Tokens: `accent` is Emerald #12664F; added `digital` (Sapphire #153E8A), `ruby`, `emerald`, `sapphire`, `forest`, `sage`; `band-dark` is Forest #244B3E; `accent-strong`, `accent-tint` and the dark-theme values are derived. `mono` resolves to Inter. Mark tokens are Ruby, Sapphire and Emerald.
+- Logo: the faceted three-face crystal replaces the all-blue tetrahedron. New PNG exports of the color and reversed lockups and marks.
+- Components: `Logo` draws the faceted mark; added the BrandCanon reference; BrandApplications follows the Evolution 12 board.
+- Preset: added `eta-digital`, `eta-sapphire`, `eta-emerald`, `eta-ruby`, `eta-forest`, `eta-sage`. Class names unchanged, so consumers re-skin on upgrade.
+- Breaking for consumers that hard-coded #1d73ed or the blue marks.
+
 ## 2026-10-10 (later)
 
 - Tailwind 3 preset at `@et-advisory/brand/preset`, rebuilt on the v2 tokens; replaces the v1 HSL preset.
