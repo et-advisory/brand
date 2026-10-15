@@ -2,12 +2,12 @@
 
 ## 3.0.0 (2026-10-15)
 
-Brand Evolution 12 is the canon. Replaces Royal Blue (v2).
+Brand Evolution 13 is the canon. Replaces Royal Blue (v2) and the short-lived Evolution 12.
 
-- Tokens: `accent` is Emerald #12664F; added `digital` (Sapphire #153E8A), `ruby`, `emerald`, `sapphire`, `forest`, `sage`; `band-dark` is Forest #244B3E; `accent-strong`, `accent-tint` and the dark-theme values are derived. `mono` resolves to Inter. Mark tokens are Ruby, Sapphire and Emerald.
-- Logo: the faceted three-face crystal replaces the all-blue tetrahedron. New PNG exports of the color and reversed lockups and marks.
-- Components: `Logo` draws the faceted mark; added the BrandCanon reference; BrandApplications follows the Evolution 12 board.
-- Preset: added `eta-digital`, `eta-sapphire`, `eta-emerald`, `eta-ruby`, `eta-forest`, `eta-sage`. Class names unchanged, so consumers re-skin on upgrade.
+- Tokens: `accent` is Emerald #12664F; added `digital` (Sapphire #153E8A), `ruby`, `emerald`, `sapphire`, `white` #F7F7F4, `obsidian` #111214, `silver` #B9BEC4 and `gold-canon` #B79A58. `band-dark` is Obsidian. `forest`, `sage` and `paper` stay as legacy tokens. `accent-strong`, `accent-tint` and the dark-theme values are derived. `mono` resolves to Inter.
+- Logo: the faceted three-face crystal (Ruby left, Sapphire right, Emerald bottom) replaces the all-blue tetrahedron. New PNG exports of the color and reversed lockups and marks.
+- Components: `Logo` draws the faceted mark; added the BrandCanon reference; BrandApplications follows the board.
+- Preset: added `eta-digital`, `eta-sapphire`, `eta-emerald`, `eta-ruby`, `eta-forest`, `eta-sage`, `eta-white`, `eta-obsidian`, `eta-silver`, `eta-gold-canon` and `font-serif`. Class names unchanged, so consumers re-skin on upgrade.
 - Breaking for consumers that hard-coded #1d73ed or the blue marks.
 
 ## 2026-10-10 (later)

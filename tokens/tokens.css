@@ -30,7 +30,7 @@
   --mark-reversed-light: #f2748f;
   --mark-reversed-mid: #7aa2f2;
   --mark-reversed-deep: #52c4a0;
-  --band-dark: #244b3e;
+  --band-dark: #111214;
   --on-band-dark: #f4f4f2;
   --on-band-dark-muted: #b8bac2;
   --gold-light: #f6d27a;
@@ -41,6 +41,10 @@
   --forest: #244b3e;
   --sage: #91ad91;
   --digital: #153e8a;
+  --white: #f7f7f4;
+  --obsidian: #111214;
+  --silver: #b9bec4;
+  --gold-canon: #b79a58;
 
   --space-1: 4px;
   --space-2: 8px;
@@ -95,7 +99,7 @@
     --mark-reversed-light: #f2748f;
     --mark-reversed-mid: #7aa2f2;
     --mark-reversed-deep: #52c4a0;
-    --band-dark: #244b3e;
+    --band-dark: #111214;
     --on-band-dark: #f4f4f2;
     --on-band-dark-muted: #b8bac2;
     --gold-light: #f6d27a;
@@ -106,6 +110,10 @@
     --forest: #244b3e;
     --sage: #91ad91;
     --digital: #7aa2f2;
+    --white: #f7f7f4;
+    --obsidian: #111214;
+    --silver: #b9bec4;
+    --gold-canon: #b79a58;
   }
 }
 
@@ -139,7 +147,7 @@
   --mark-reversed-light: #f2748f;
   --mark-reversed-mid: #7aa2f2;
   --mark-reversed-deep: #52c4a0;
-  --band-dark: #244b3e;
+  --band-dark: #111214;
   --on-band-dark: #f4f4f2;
   --on-band-dark-muted: #b8bac2;
   --gold-light: #f6d27a;
@@ -150,6 +158,10 @@
   --forest: #244b3e;
   --sage: #91ad91;
   --digital: #7aa2f2;
+  --white: #f7f7f4;
+  --obsidian: #111214;
+  --silver: #b9bec4;
+  --gold-canon: #b79a58;
 }
 
 /* Type styles */
