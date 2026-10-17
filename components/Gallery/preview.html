@@ -1,0 +1,26 @@
+<!-- @dsCard group="Data" height=260 subtitle="three ETA.Card in an ETA.Gallery" -->
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Gallery — preview</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><style>
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-sans);font-size:14px;line-height:1.5}
+*{box-sizing:border-box}
+#root{padding:var(--space-5)}
+h3{margin:0;font-size:24px;font-weight:700;line-height:1.2}
+p{margin:0;color:var(--ink-muted)}
+</style></head>
+<body>
+<div id="root"></div>
+<script>
+var E = window.ETA, h = React.createElement;
+ReactDOM.createRoot(document.getElementById("root")).render(h(E.Gallery, { columns: 3 },
+  h(E.Card, { footer: "Source: Paxos, paxos.com/paxg" },
+    h("h3", null, "Gold, PAXG"),
+    h("p", null, "One token represents one fine troy ounce of gold in a London vault.")),
+  h(E.Card, { footer: "Source: stellar.org" },
+    h("h3", null, "Fund shares, FOBXX"),
+    h("p", null, "The public blockchain has been the fund's official share register since April 2021. A longer line makes this card the tallest in the row.")),
+  h(E.Card, { footer: "Source: rwa.xyz" },
+    h("h3", null, "Treasuries"),
+    h("p", null, "Tokenized treasuries are held on a public blockchain."))
+));
+</script>
+</body></html>

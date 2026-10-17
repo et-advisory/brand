@@ -19,12 +19,15 @@ export declare function Badge(props: BadgeProps): React.ReactElement;
 export interface StatusChipProps extends React.HTMLAttributes<HTMLSpanElement> { tone?: 'neutral' | 'info' | 'success' | 'pending' | 'danger'; children?: React.ReactNode }
 export declare function StatusChip(props: StatusChipProps): React.ReactElement;
 
-/** A bordered panel. `footer` renders an ETA.CardFooter below the body: the place for a source line, a credit or a date of record. */
-export interface CardProps extends React.HTMLAttributes<HTMLDivElement> { footer?: React.ReactNode; children?: React.ReactNode }
+/** A bordered panel with four fixed slots: an optional icon tile (an SVG icon node), a title, the content, and a footer for provenance (a source line, a credit, the links behind a figure). */
+export interface CardProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> { icon?: React.ReactNode; title?: React.ReactNode; footer?: React.ReactNode; children?: React.ReactNode }
 export declare function Card(props: CardProps): React.ReactElement;
 /** The hairline-topped footer of a Card, in the mono source style. */
 export interface CardFooterProps extends React.HTMLAttributes<HTMLElement> { children?: React.ReactNode }
 export declare function CardFooter(props: CardFooterProps): React.ReactElement;
+/** A grid of cards in a ul or ol: fixed gap, 2 to 4 columns, every card in a row the same height. */
+export interface GalleryProps { columns?: 2 | 3 | 4; ordered?: boolean; className?: string; children?: React.ReactNode }
+export declare function Gallery(props: GalleryProps): React.ReactElement;
 
 /** One verified figure. Omit `value` to show the bracketed placeholder; `source` is always shown, as the card's footer. */
 export interface StatTileProps extends React.HTMLAttributes<HTMLDivElement> { value?: React.ReactNode; label: React.ReactNode; source?: string }
@@ -65,7 +68,7 @@ export declare function Logo(props: LogoProps): React.ReactElement;
 declare global {
   interface Window {
     ETA: {
-      Button: typeof Button; Badge: typeof Badge; StatusChip: typeof StatusChip; Card: typeof Card; CardFooter: typeof CardFooter; StatTile: typeof StatTile; StatRow: typeof StatRow;
+      Button: typeof Button; Badge: typeof Badge; StatusChip: typeof StatusChip; Card: typeof Card; CardFooter: typeof CardFooter; Gallery: typeof Gallery; StatTile: typeof StatTile; StatRow: typeof StatRow;
       ServiceCard: typeof ServiceCard; ServiceRow: typeof ServiceRow; Eyebrow: typeof Eyebrow; SectionHeading: typeof SectionHeading; Logo: typeof Logo; SERVICES: typeof SERVICES;
     };
   }

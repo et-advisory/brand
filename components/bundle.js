@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"ETA","components":[{"name":"Logo"},{"name":"Button"},{"name":"Badge"},{"name":"StatusChip"},{"name":"Card"},{"name":"CardFooter"},{"name":"StatTile"},{"name":"ServiceCard"},{"name":"Eyebrow"},{"name":"SectionHeading"}]} */
+/* @ds-bundle: {"format":4,"namespace":"ETA","components":[{"name":"Logo"},{"name":"Button"},{"name":"Badge"},{"name":"StatusChip"},{"name":"Card"},{"name":"Gallery"},{"name":"CardFooter"},{"name":"StatTile"},{"name":"ServiceCard"},{"name":"Eyebrow"},{"name":"SectionHeading"}]} */
 (function () {
   "use strict";
   var React = window.React;
@@ -48,9 +48,17 @@
     return h("footer", Object.assign({ className: cx("eta-card-footer", props.className) }, omit(props, ["className", "children"])), props.children);
   }
   function Card(props) {
-    return h("div", Object.assign({ className: cx("eta-card", props.className) }, omit(props, ["footer", "className", "children"])),
-      h("div", { className: "eta-card-body" }, props.children),
+    return h("div", Object.assign({ className: cx("eta-card", props.className) }, omit(props, ["icon", "title", "footer", "className", "children"])),
+      props.icon == null ? null : h("div", { className: "eta-card-icon", "aria-hidden": true }, props.icon),
+      props.title == null ? null : h("h3", { className: "eta-card-title" }, props.title),
+      h("div", { className: "eta-card-content" }, props.children),
       props.footer == null ? null : h(CardFooter, null, props.footer));
+  }
+
+  /* ---------- Gallery ---------- */
+  function Gallery(props) {
+    return h(props.ordered ? "ol" : "ul", { className: cx("eta-gallery", "eta-gallery-" + (props.columns || 3), props.className) },
+      React.Children.map(props.children, function (c) { return c == null ? null : h("li", { className: "eta-gallery-item" }, c); }));
   }
 
   function StatTile(props) {
@@ -175,6 +183,6 @@
       h("title", null, label), kids);
   }
 
-  var api = { Button: Button, Badge: Badge, StatusChip: StatusChip, Card: Card, CardFooter: CardFooter, StatTile: StatTile, StatRow: StatRow, ServiceCard: ServiceCard, ServiceRow: ServiceRow, Eyebrow: Eyebrow, SectionHeading: SectionHeading, Logo: Logo, SERVICES: SERVICES };
+  var api = { Button: Button, Badge: Badge, StatusChip: StatusChip, Card: Card, CardFooter: CardFooter, Gallery: Gallery, StatTile: StatTile, StatRow: StatRow, ServiceCard: ServiceCard, ServiceRow: ServiceRow, Eyebrow: Eyebrow, SectionHeading: SectionHeading, Logo: Logo, SERVICES: SERVICES };
   window.ETA = Object.assign(window.ETA || {}, api);
 })();
