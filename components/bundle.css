@@ -32,13 +32,19 @@
 .eta-row{display:grid;grid-template-columns:repeat(var(--eta-cols,3),minmax(0,1fr));gap:var(--space-5)}
 @media (max-width:640px){.eta-row{grid-template-columns:1fr}}
 
-.eta-stat{display:flex;flex-direction:column;gap:var(--space-2);background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--space-5);font-family:var(--font-sans)}
+.eta-card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--space-5);font-family:var(--font-sans)}
+.eta-card-icon{display:flex;align-items:center;justify-content:center;width:40px;height:40px;margin-bottom:var(--space-4);border:1px solid var(--line);border-radius:var(--radius-xl);background:var(--surface);color:var(--accent)}
+.eta-card-icon svg{width:18px;height:18px}
+.eta-card-title{margin:0;font-size:18px;font-weight:700;line-height:1.35;letter-spacing:-0.01em;color:var(--ink)}
+.eta-card-title+.eta-card-content{margin-top:var(--space-2)}
+.eta-card-content{display:flex;flex-direction:column;gap:var(--space-2);flex:1;font-size:14px;line-height:1.55;color:var(--ink-muted)}
+.eta-card-footer{margin-top:var(--space-4);padding-top:var(--space-3);border-top:1px solid var(--line);font-family:var(--font-mono);font-variant-numeric:tabular-nums;font-size:12px;font-weight:500;line-height:1.4;color:var(--ink-muted)}
+.eta-card-footer a{color:var(--accent-strong);font-weight:600;text-decoration:none}
 .eta-stat-value{font-size:48px;font-weight:900;line-height:1.08;letter-spacing:-0.02em;color:var(--accent);font-variant-numeric:tabular-nums}
 .eta-stat-label{font-size:14px;font-weight:600;line-height:1.5;color:var(--ink)}
-.eta-stat-source{font-family:var(--font-mono);font-size:12px;font-weight:500;line-height:1.4;color:var(--ink-muted)}
 
 .eta-svc{display:flex;flex-direction:column;gap:var(--space-3);background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--space-5);font-family:var(--font-sans)}
-.eta-svc-no{font-family:var(--font-mono);font-size:12px;font-weight:500;line-height:1.4;letter-spacing:0.08em;color:var(--accent-strong)}
+.eta-svc-no{font-family:var(--font-mono);font-variant-numeric:tabular-nums;font-size:12px;font-weight:500;line-height:1.4;letter-spacing:0.08em;color:var(--accent-strong)}
 .eta-svc-title{margin:0;font-size:24px;font-weight:700;line-height:1.2;color:var(--ink)}
 .eta-svc-body{margin:0;font-size:14px;line-height:1.5;color:var(--ink-muted)}
 
@@ -48,5 +54,11 @@
 .eta-sh-center{align-items:center;text-align:center;margin-left:auto;margin-right:auto}
 .eta-sh-title{margin:0;font-size:36px;font-weight:900;line-height:1.1;letter-spacing:-0.02em;color:var(--ink)}
 .eta-sh-lead{margin:0;font-size:18px;line-height:1.5;color:var(--ink-muted)}
+
+.eta-gallery{display:grid;gap:var(--space-4);list-style:none;margin:0;padding:0}
+.eta-gallery-item{display:flex;min-width:0}
+.eta-gallery-item>*{flex:1;width:100%}
+@media(min-width:640px){.eta-gallery-2,.eta-gallery-3,.eta-gallery-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1024px){.eta-gallery-3{grid-template-columns:repeat(3,minmax(0,1fr))}.eta-gallery-4{grid-template-columns:repeat(4,minmax(0,1fr))}}
 
 .eta-logo{overflow:visible}

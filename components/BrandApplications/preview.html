@@ -1,22 +1,15 @@
-<!-- @dsCard group="Brand" height=760 subtitle="The mark at work: card, signature, social" -->
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../bundle.css"><script src="../lib/react.production.min.js"></script><script src="../lib/react-dom.production.min.js"></script><script src="../bundle.js"></script><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><style>body{margin:0}*{box-sizing:border-box}
+<!-- @dsCard group="Brand" height=820 subtitle="The mark at work: card, signature, social (Brand Evolution 12)" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><style>body{margin:0}*{box-sizing:border-box}
 .panel{background:var(--paper);color:var(--ink);font-family:var(--font-sans);font-size:14px;line-height:1.5;padding:var(--space-5)}
 .lbl{font-family:var(--font-mono);font-size:12px;font-weight:500;line-height:1.4;color:var(--ink-muted);margin:0}
 .h{margin:0 0 var(--space-3);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-strong)}
 svg{display:block;overflow:visible}
-
 .card{aspect-ratio:3.5/2;border-radius:var(--radius-md);border:1px solid var(--line);position:relative;overflow:hidden}
-.card.front{background:var(--band-dark);border-color:var(--band-dark)}
-.card.front .wm{position:absolute;left:7%;top:12%;width:24%}
-.card.front .big{position:absolute;right:-6%;bottom:-16%;width:66%}
-.card.front .url{position:absolute;left:7%;bottom:10%;margin:0;font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;color:var(--on-band-dark-muted)}
-.card.back{background:var(--card);padding:7%;display:flex;flex-direction:column;justify-content:space-between}
-.card.back .top{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--space-4)}
-.card.back .nm{font-size:22px;font-weight:800;line-height:1.1;letter-spacing:-0.02em;margin:0;color:var(--ink)}
-.card.back .tt{font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;margin:var(--space-2) 0 0;color:var(--accent-strong)}
-.card.back .ct{display:grid;grid-template-columns:auto 1fr;column-gap:var(--space-4);row-gap:var(--space-1);margin:0;padding-top:var(--space-3);border-top:1px solid var(--line);font-family:var(--font-mono);font-size:12px;line-height:1.5}
-.card.back .ct dt{font-family:var(--font-sans);font-size:12px;color:var(--ink-muted)}
-.card.back .ct dt b{font-size:14px;font-weight:900;color:var(--accent-strong)}.card.back .ct dd{margin:0;color:var(--ink)}
+.card.front{background:var(--card);display:flex;align-items:center;justify-content:center}
+.card.back{background:var(--band-dark);border-color:var(--band-dark);padding:7%;display:flex;flex-direction:column;justify-content:space-between}
+.card.back p{margin:0;font-size:21px;font-weight:800;line-height:1.1;letter-spacing:-0.02em;color:var(--on-band-dark);max-width:62%}
+.card.back .grid{width:46px;align-self:flex-end;fill:none;stroke:var(--sage);stroke-width:1.4}
+.card.back .ct{margin:0;font-family:var(--font-mono);font-size:12px;line-height:1.5;color:var(--on-band-dark-muted)}
 .spec{margin:var(--space-3) 0 0;font-size:12px;color:var(--ink-muted)}
 .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-5)}
 .cap{margin-top:var(--space-2)}
@@ -30,21 +23,24 @@ svg{display:block;overflow:visible}
 .avatar{width:112px;height:112px;border-radius:9999px;background:var(--band-dark);display:flex;align-items:center;justify-content:center;flex:none}
 .banner{flex:0 1 560px;height:112px;border-radius:var(--radius-lg);background:var(--band-dark);position:relative;overflow:hidden;display:flex;align-items:center;padding:0 var(--space-6)}
 .banner p{margin:0;font-size:22px;font-weight:800;line-height:1.1;letter-spacing:-0.02em;color:var(--on-band-dark);max-width:300px;position:relative}
-.banner svg.bg{position:absolute;right:-30px;top:-34px;width:230px;opacity:1}
+.booklet{display:flex;gap:var(--space-5);align-items:flex-start}
+.cover{width:240px;aspect-ratio:3/4;background:var(--band-dark);border-radius:var(--radius-md);padding:var(--space-5);display:flex;flex-direction:column;justify-content:space-between}
+.cover p{margin:0;font-size:26px;font-weight:800;line-height:1.08;letter-spacing:-0.02em;color:var(--on-band-dark)}
 </style></head><body><div class="panel">
 <p class="h">Business card · 3.5 x 2 in</p>
 <div class="wrap">
- <div><div class="card front"><svg class="wm" viewBox="0 0 153 94" aria-label="ET Advisory" role="img"><path d="M0 0 L42 0 L42 14.5 L14.5 14.5 L14.5 24.75 L38 24.75 L38 39.25 L14.5 39.25 L14.5 49.5 L42 49.5 L42 64 L0 64ZM49 0 L97 0 L97 14.5 L80.25 14.5 L80.25 64 L65.75 64 L65.75 14.5 L49 14.5ZM93 64 L116.11 0 L129.89 0 L153 64 L137.58 64 L123 23.62 L108.42 64ZM116.2 39.68 L129.8 39.68 L134.09 51.57 L111.91 51.57Z" style="fill:var(--on-band-dark)"/><path d="M8.08 0H0.95V11.5H8.08M0.95 5.75H7.275M14.957358490566037 0H23.237358490566038M19.097358490566037 0V11.5M41.118490566037735 11.5L45.948490566037734 0L50.77849056603773 11.5M42.95849056603774 7.13H48.938490566037736M57.65584905660377 0V11.5H60.87584905660377A5.75 5.75 0 0 0 60.87584905660377 0ZM73.50320754716981 0L78.3332075471698 11.5L83.1632075471698 0M90.04056603773584 0V11.5M102.28267452830188 1.4375A2.875 2.875 0 1 0 99.79292452830188 5.75A2.875 2.875 0 1 1 97.30317452830188 10.0625M115.29528301886792 0A5.75 5.75 0 1 1 115.29528301886792 11.5A5.75 5.75 0 1 1 115.29528301886792 0ZM127.92264150943396 11.5V0H132.29264150943396A2.875 2.875 0 0 1 132.29264150943396 5.75H127.92264150943396M131.83264150943396 5.75L135.51264150943396 11.5M142.39 0L147.22 5.75L152.04999999999998 0M147.22 5.75V11.5" fill="none" style="stroke:var(--on-band-dark)" stroke-width="1.9" stroke-linejoin="bevel" stroke-linecap="butt" transform="translate(0 81)"/></svg><svg class="big" style=""  viewBox="0 0 120 103.92" aria-label="ET Advisory mark" role="img"><path d="M57.91 3.62 L2.57 99.47 L64.83 62.19Z" style="fill:var(--mark-reversed-light)"/><path d="M116.72 98.24 L63.16 5.48 L69.86 62.16Z" style="fill:var(--mark-reversed-mid)"/><path d="M4.87 103.92 L115.9 103.92 L67.32 66.52Z" style="fill:var(--mark-reversed-deep)"/></svg><p class="url">etadvisory.xyz</p></div><p class="lbl cap">Front: wordmark top-left, the mark at 66% of the card bleeding off the bottom-right corner, domain in mono</p></div>
- <div><div class="card back"><div class="top"><div><p class="nm">Full Name</p><p class="tt">Title</p></div><svg class="" style="width:34px;flex:none"  viewBox="0 0 120 103.92" aria-label="ET Advisory mark" role="img"><path d="M57.91 3.62 L2.57 99.47 L64.83 62.19Z" style="fill:var(--mark-facet-light)"/><path d="M116.72 98.24 L63.16 5.48 L69.86 62.16Z" style="fill:var(--mark-facet-mid)"/><path d="M4.87 103.92 L115.9 103.92 L67.32 66.52Z" style="fill:var(--mark-facet-deep)"/></svg></div>
-  <dl class="ct"><dt><b>E</b>mail</dt><dd>name@etadvisory.xyz</dd><dt><b>T</b>elephone</dt><dd>+1 000 000 0000</dd><dt><b>A</b>ddress</dt><dd>etadvisory.xyz</dd></dl></div><p class="lbl cap">Back: name and title top-left, mark top-right, contacts on a hairline; the initials of Email, Telephone and Address spell ETA down the column</p></div>
+ <div><div class="card front"><div class="lg" data-v="horizontal" data-t="color" style="width:56%"></div></div><p class="lbl cap">Front: the horizontal lockup centred on card, full color</p></div>
+ <div><div class="card back"><p>A new market for the real world.</p><svg class="grid" viewBox="0 0 48 48" aria-hidden="true"><rect x="0" y="0" width="12" height="12" rx="1"/><rect x="18" y="0" width="12" height="12" rx="1"/><rect x="36" y="0" width="12" height="12" rx="1"/><rect x="0" y="18" width="12" height="12" rx="1"/><rect x="18" y="18" width="12" height="12" rx="1"/><rect x="36" y="18" width="12" height="12" rx="1"/><rect x="0" y="36" width="12" height="12" rx="1"/><rect x="18" y="36" width="12" height="12" rx="1"/><rect x="36" y="36" width="12" height="12" rx="1"/></svg><p class="ct" style="max-width:none">name@etadvisory.xyz</p></div><p class="lbl cap">Back: campaign line, a 3 by 3 grid of outlined squares in sage, contact in mono</p></div>
 </div>
-<p class="spec">Print: 3.5 x 2 in with 0.125 in bleed and a 0.125 in safe margin; front full-bleed band-dark, back on uncoated bright white. Keep the mark's crop so the apex and the meeting point of the three faces stay on the card.</p>
+<p class="spec">Print: 3.5 x 2 in with 0.125 in bleed and a 0.125 in safe margin; front on uncoated bright white, back full-bleed band-dark (Forest). Contact lines are the person's own; none are invented here.</p>
 <p class="h" style="margin-top:var(--space-6)">Email signature</p>
-<div class="sig"><svg class="" style="width:44px"  viewBox="0 0 120 103.92" aria-label="ET Advisory mark" role="img"><path d="M57.91 3.62 L2.57 99.47 L64.83 62.19Z" style="fill:var(--mark-facet-light)"/><path d="M116.72 98.24 L63.16 5.48 L69.86 62.16Z" style="fill:var(--mark-facet-mid)"/><path d="M4.87 103.92 L115.9 103.92 L67.32 66.52Z" style="fill:var(--mark-facet-deep)"/></svg><span class="div"></span><div><p class="nm">Full Name</p><p class="tt">Title, ET Advisory</p><p class="ct">etadvisory.xyz</p></div></div>
+<div class="sig"><div class="lg" data-v="mark" data-t="color" style="width:44px;flex:none"></div><span class="div"></span><div><p class="nm">Full Name</p><p class="tt">Title, ET Advisory</p><p class="ct">etadvisory.xyz</p></div></div>
 <p class="h" style="margin-top:var(--space-6)">Social</p>
 <div class="social">
- <div class="avatar"><svg class="" style="width:60px;transform:translateY(-4px)"  viewBox="0 0 120 103.92" aria-label="ET Advisory mark" role="img"><path d="M57.91 3.62 L2.57 99.47 L64.83 62.19Z" style="fill:var(--mark-reversed-light)"/><path d="M116.72 98.24 L63.16 5.48 L69.86 62.16Z" style="fill:var(--mark-reversed-mid)"/><path d="M4.87 103.92 L115.9 103.92 L67.32 66.52Z" style="fill:var(--mark-reversed-deep)"/></svg></div>
- <div class="banner"><svg class="bg" style=""  viewBox="0 0 120 103.92" aria-label="ET Advisory mark" role="img"><path d="M57.91 3.62 L2.57 99.47 L64.83 62.19Z" style="fill:var(--mark-reversed-deep)"/><path d="M116.72 98.24 L63.16 5.48 L69.86 62.16Z" style="fill:var(--mark-reversed-deep)"/><path d="M4.87 103.92 L115.9 103.92 L67.32 66.52Z" style="fill:var(--mark-reversed-deep)"/></svg><p>Tokenization is the instrument. The deliverable is a closed raise.</p></div>
+ <div class="avatar"><div class="lg" data-v="mark" data-t="reversed" style="width:60px;transform:translateY(-4px)"></div></div>
+ <div class="banner"><div class="lg" data-v="mark" data-t="reversed" style="position:absolute;right:-30px;top:-34px;width:230px;opacity:.35"></div><p>Real-world assets. In the palm of your hand.</p></div>
 </div>
-<p class="lbl cap social-cap">Avatar: the mark centred, nudged up so the triangle's visual weight sits on the circle's centre. Banner: one cropped mark in mark-reversed-deep, the line in on-band-dark.</p>
-</div></body></html>
+<p class="lbl cap social-cap">Avatar: the reversed mark centred, nudged up so the triangle's visual weight sits on the circle's centre. Banner: one cropped reversed mark at low strength, the story line in on-band-dark.</p>
+<p class="h" style="margin-top:var(--space-6)">Booklet cover</p>
+<div class="booklet"><div class="cover"><div class="lg" data-v="horizontal" data-t="reversed" style="width:96px"></div><p>The real world. In your hands.</p></div><p class="lbl" style="max-width:360px">Band-dark cover, reversed lockup top-left, the booklet line bottom-left. The board pairs it with an aerial parcel map and a phone showing Asset overview; supply the photograph, which this system does not ship.</p></div>
+</div><script>var E=window.ETA,h=React.createElement;Array.prototype.forEach.call(document.querySelectorAll('.lg'),function(el){ReactDOM.createRoot(el).render(h(E.Logo,{variant:el.getAttribute('data-v'),tone:el.getAttribute('data-t'),width:'100%'}))});</script></body></html>
