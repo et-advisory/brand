@@ -51,7 +51,7 @@ export default {
   theme: {
     container: { center: true, padding: "2rem", screens: { "2xl": "1400px" } },
     extend: {
-      fontFamily: { sans: ["var(--font-sans)"], mono: ["var(--font-mono)"] },
+      fontFamily: { sans: ["var(--font-sans)"], serif: ["var(--font-serif)"], mono: ["var(--font-mono)"] },
       fontSize: {
         "2xs": ["10px", { lineHeight: "14px" }],
         eyebrow: ["12px", { lineHeight: "1.2", letterSpacing: "0.18em", fontWeight: "600" }],
@@ -87,6 +87,16 @@ export default {
           t: c("letter-t"),
           a: c("letter-a"),
           gold: c("gold"),
+          digital: c("digital"),
+          sapphire: c("sapphire"),
+          emerald: c("emerald"),
+          ruby: c("ruby"),
+          forest: c("forest"),
+          sage: c("sage"),
+          white: c("white"),
+          obsidian: c("obsidian"),
+          silver: c("silver"),
+          "gold-canon": c("gold-canon"),
           "status-progress": c("warning-bg"),
           "status-progress-fg": c("warning"),
           "status-active": c("success-bg"),
@@ -99,7 +109,7 @@ export default {
           "status-blocked-fg": c("danger"),
         },
       },
-      // Blue text under 24px must be accent-strong for contrast.
+      // Emerald text under 24px must be accent-strong for contrast.
       textColor: {
         primary: { DEFAULT: c("accent-strong") },
         eta: { accent: c("accent-strong") },

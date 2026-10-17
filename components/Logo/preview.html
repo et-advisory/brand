@@ -1,6 +1,6 @@
-<!-- @dsCard group="Brand" height=1200 subtitle="ETA.Logo: the faceted tetrahedron mark, lockups and tones, drawn from tokens" -->
+<!-- @dsCard group="Brand" height=1200 subtitle="ETA.Logo: the Ruby, Sapphire and Emerald tetrahedron mark, lockups and tones, drawn from the generated mark data" -->
 <!doctype html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="../../tokens/tokens.css"><link rel="stylesheet" href="../bundle.css"><script src="../lib/react.production.min.js"></script><script src="../lib/react-dom.production.min.js"></script><script src="../bundle.js"></script><title>Logo — preview</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><style>
+<html><head><meta charset="utf-8"><title>Logo preview</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><style>
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-sans);font-size:14px;line-height:1.5}
 *{box-sizing:border-box}
 #root{padding:var(--space-5)}
@@ -20,7 +20,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-sa
 .x{font-size:12px;font-weight:600;color:var(--danger)}
 .cs{display:inline-block;padding:28px;border:1px dashed var(--accent-strong)}
 .minrow{display:flex;align-items:flex-end;gap:var(--space-5);flex-wrap:wrap}.minrow>div{display:flex;flex-direction:column;gap:var(--space-2)}
-.rgb path:nth-of-type(1){fill:var(--letter-e)!important}.rgb path:nth-of-type(2){fill:var(--letter-t)!important}.rgb path:nth-of-type(3){fill:var(--letter-a)!important}</style></head>
+.rgb path{fill:var(--gold)!important}</style></head>
 <body>
 <div id="root"></div>
 <script>
@@ -51,7 +51,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(h("div", { className
       h("div", null, L({ variant: "mark", tone: "mono", width: 16 }), h("span", { className: "lbl" }, "16px, mono"))))),
   h("p", { className: "h" }, "Do not"),
   h("div", { className: "grid g4" },
-    h(Tile, { label: "Not with the letter colours, not gold beside blue", x: "Recolour the faces" }, L({ variant: "mark", width: 70, className: "rgb" })),
+    h(Tile, { label: "Not with other palette hues, not gold", x: "Recolour the faces" }, L({ variant: "mark", width: 70, className: "rgb" })),
     h(Tile, { label: "The apex always points up", x: "Rotate or flip" }, L({ variant: "mark", width: 70, style: { transform: "rotate(180deg)" } })),
     h(Tile, { label: "Scale proportionally", x: "Stretch or squash" }, L({ variant: "mark", width: 110, preserveAspectRatio: "none", style: { height: 60 } })),
     h(Tile, { label: "No shadows, outlines or gradients", x: "Add effects" }, L({ variant: "mark", width: 70, style: { filter: "drop-shadow(4px 6px 0 var(--ink-faint))" } })))

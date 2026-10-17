@@ -19,8 +19,18 @@ export declare function Badge(props: BadgeProps): React.ReactElement;
 export interface StatusChipProps extends React.HTMLAttributes<HTMLSpanElement> { tone?: 'neutral' | 'info' | 'success' | 'pending' | 'danger'; children?: React.ReactNode }
 export declare function StatusChip(props: StatusChipProps): React.ReactElement;
 
-/** One verified figure. Omit `value` to show the bracketed placeholder; `source` is always shown. */
-export interface StatTileProps extends React.HTMLAttributes<HTMLDivElement> { value?: React.ReactNode; label: React.ReactNode; source?: string }
+/** A bordered panel with four fixed slots: an optional icon tile (an SVG icon node), a title, the content, and a footer for provenance (a source line, a credit, the links behind a figure). */
+export interface CardProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> { icon?: React.ReactNode; title?: React.ReactNode; /** Heading level of the title; default 3. */ level?: 2 | 3 | 4; footer?: React.ReactNode; children?: React.ReactNode }
+export declare function Card(props: CardProps): React.ReactElement;
+/** The hairline-topped footer of a Card, in the mono source style. */
+export interface CardFooterProps extends React.HTMLAttributes<HTMLDivElement> { children?: React.ReactNode }
+export declare function CardFooter(props: CardFooterProps): React.ReactElement;
+/** A grid of cards in a ul or ol: fixed gap, 2 to 4 columns, every card in a row the same height. */
+export interface GalleryProps extends React.HTMLAttributes<HTMLUListElement> { columns?: 2 | 3 | 4; ordered?: boolean; children?: React.ReactNode }
+export declare function Gallery(props: GalleryProps): React.ReactElement;
+
+/** One verified figure. Omit `value` to show the bracketed placeholder; `source` is always shown, as the card's footer. */
+export interface StatTileProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> { value?: React.ReactNode; label: React.ReactNode; source?: string; footer?: never }
 export declare function StatTile(props: StatTileProps): React.ReactElement;
 /** A row of two to four StatTiles. */
 export interface StatRowProps { children?: React.ReactNode; className?: string }
@@ -43,7 +53,7 @@ export declare function Eyebrow(props: EyebrowProps): React.ReactElement;
 export interface SectionHeadingProps extends React.HTMLAttributes<HTMLDivElement> { eyebrow?: React.ReactNode; title: React.ReactNode; lead?: React.ReactNode; level?: 1 | 2 | 3; align?: 'start' | 'center' }
 export declare function SectionHeading(props: SectionHeadingProps): React.ReactElement;
 
-/** The proposed ETA logo, drawn from tokens so it follows the theme. Match `tone` to the ground. */
+/** The ETA logo, drawn from the same data as `logos/*.svg`; `color` switches to the reversed stones in the dark theme. Match `tone` to the ground. */
 export interface LogoProps extends React.SVGAttributes<SVGSVGElement> {
   variant?: 'horizontal' | 'stacked' | 'mark' | 'wordmark';
   /** color: paper/surface/card · reversed: band-dark or photo · mono / monoReversed: one ink · onAccent: on an accent fill · gold: ceremonial, band-dark only */
@@ -58,7 +68,7 @@ export declare function Logo(props: LogoProps): React.ReactElement;
 declare global {
   interface Window {
     ETA: {
-      Button: typeof Button; Badge: typeof Badge; StatusChip: typeof StatusChip; StatTile: typeof StatTile; StatRow: typeof StatRow;
+      Button: typeof Button; Badge: typeof Badge; StatusChip: typeof StatusChip; Card: typeof Card; CardFooter: typeof CardFooter; Gallery: typeof Gallery; StatTile: typeof StatTile; StatRow: typeof StatRow;
       ServiceCard: typeof ServiceCard; ServiceRow: typeof ServiceRow; Eyebrow: typeof Eyebrow; SectionHeading: typeof SectionHeading; Logo: typeof Logo; SERVICES: typeof SERVICES;
     };
   }

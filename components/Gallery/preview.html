@@ -1,0 +1,26 @@
+<!-- @dsCard group="Data" height=280 subtitle="three ETA.Card in an ETA.Gallery" -->
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Gallery preview</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><style>
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-sans);font-size:14px;line-height:1.5}
+*{box-sizing:border-box}
+#root{padding:var(--space-5)}
+p{margin:0}
+</style></head>
+<body>
+<div id="root"></div>
+<script>
+var E = window.ETA, h = React.createElement;
+function icon() {
+  return h("svg", { viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" },
+    Array.prototype.map.call(arguments, function (d, i) { return h("path", { key: i, d: d }); }));
+}
+ReactDOM.createRoot(document.getElementById("root")).render(h(E.Gallery, { columns: 3, "aria-label": "Tokenized assets" },
+  h(E.Card, { icon: icon("M6 3h12l4 6-10 13L2 9Z", "M11 3 8 9l4 13 4-13-3-6", "M2 9h20"), title: "Gold, PAXG", footer: "Source: Paxos, paxos.com/paxg" },
+    h("p", null, "One token represents one fine troy ounce of gold in a London vault.")),
+  h(E.Card, { icon: icon("M3 22h18", "M6 18v-7", "M10 18v-7", "M14 18v-7", "M18 18v-7", "M12 2 20 7H4Z"), title: "Fund shares, FOBXX", footer: "Source: stellar.org" },
+    h("p", null, "The public blockchain has been the fund's official share register since April 2021. A longer line makes this card the tallest in the row.")),
+  h(E.Card, { icon: icon("M3 3h18v18H3Z", "M3 12h18", "M12 3v18"), title: "Treasuries", footer: "Source: rwa.xyz" },
+    h("p", null, "Tokenized treasuries are held on a public blockchain."))
+));
+</script>
+</body></html>

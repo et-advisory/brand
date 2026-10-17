@@ -8,11 +8,11 @@
   --ink: #14151a;
   --ink-muted: #5b6070;
   --ink-faint: #6a7181;
-  --accent: #1d73ed;
-  --accent-strong: #1558c0;
+  --accent: #12664f;
+  --accent-strong: #0d4f3d;
   --on-accent: #ffffff;
-  --accent-fill: #1c70e8;
-  --accent-tint: #e7f0fd;
+  --accent-fill: #12664f;
+  --accent-tint: #e6f0ec;
   --gold: #eeb32b;
   --letter-e: #f53d43;
   --letter-t: #22c35d;
@@ -24,17 +24,27 @@
   --danger: #c0262d;
   --danger-bg: #fbe6e7;
   --on-gold: #14151a;
-  --mark-facet-light: #6aa5f7;
-  --mark-facet-mid: #1d73ed;
-  --mark-facet-deep: #0f3c87;
-  --mark-reversed-light: #b7d4fb;
-  --mark-reversed-mid: #6aa5f7;
-  --mark-reversed-deep: #1d73ed;
-  --band-dark: #14151a;
+  --mark-facet-light: #9b1738;
+  --mark-facet-mid: #153e8a;
+  --mark-facet-deep: #12664f;
+  --mark-reversed-light: #f2748f;
+  --mark-reversed-mid: #7aa2f2;
+  --mark-reversed-deep: #52c4a0;
+  --band-dark: #111214;
   --on-band-dark: #f4f4f2;
   --on-band-dark-muted: #b8bac2;
   --gold-light: #f6d27a;
   --gold-deep: #a8761a;
+  --ruby: #9b1738;
+  --emerald: #12664f;
+  --sapphire: #153e8a;
+  --forest: #244b3e;
+  --sage: #91ad91;
+  --digital: #153e8a;
+  --white: #f7f7f4;
+  --obsidian: #111214;
+  --silver: #b9bec4;
+  --gold-canon: #b79a58;
 
   --space-1: 4px;
   --space-2: 8px;
@@ -55,7 +65,7 @@
 
   --font-sans: 'Inter', Arial, sans-serif;
   --font-serif: 'Instrument Serif', Georgia, serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  --font-mono: 'Inter', Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -67,11 +77,11 @@
     --ink: #f4f4f2;
     --ink-muted: #b8bac2;
     --ink-faint: #8a8c94;
-    --accent: #6aa5f7;
-    --accent-strong: #8dbcf9;
+    --accent: #5db596;
+    --accent-strong: #86c9ae;
     --on-accent: #0b1220;
-    --accent-fill: #6aa5f7;
-    --accent-tint: #172640;
+    --accent-fill: #5db596;
+    --accent-tint: #15302a;
     --gold: #eeb32b;
     --letter-e: #f53d43;
     --letter-t: #22c35d;
@@ -83,17 +93,27 @@
     --danger: #f27a7f;
     --danger-bg: #3a1417;
     --on-gold: #14151a;
-    --mark-facet-light: #b7d4fb;
-    --mark-facet-mid: #6aa5f7;
-    --mark-facet-deep: #1d73ed;
-    --mark-reversed-light: #b7d4fb;
-    --mark-reversed-mid: #6aa5f7;
-    --mark-reversed-deep: #1d73ed;
-    --band-dark: #2a2e3b;
+    --mark-facet-light: #f2748f;
+    --mark-facet-mid: #7aa2f2;
+    --mark-facet-deep: #52c4a0;
+    --mark-reversed-light: #f2748f;
+    --mark-reversed-mid: #7aa2f2;
+    --mark-reversed-deep: #52c4a0;
+    --band-dark: #111214;
     --on-band-dark: #f4f4f2;
     --on-band-dark-muted: #b8bac2;
     --gold-light: #f6d27a;
     --gold-deep: #a8761a;
+    --ruby: #9b1738;
+    --emerald: #12664f;
+    --sapphire: #153e8a;
+    --forest: #244b3e;
+    --sage: #91ad91;
+    --digital: #7aa2f2;
+    --white: #f7f7f4;
+    --obsidian: #111214;
+    --silver: #b9bec4;
+    --gold-canon: #b79a58;
   }
 }
 
@@ -105,11 +125,11 @@
   --ink: #f4f4f2;
   --ink-muted: #b8bac2;
   --ink-faint: #8a8c94;
-  --accent: #6aa5f7;
-  --accent-strong: #8dbcf9;
+  --accent: #5db596;
+  --accent-strong: #86c9ae;
   --on-accent: #0b1220;
-  --accent-fill: #6aa5f7;
-  --accent-tint: #172640;
+  --accent-fill: #5db596;
+  --accent-tint: #15302a;
   --gold: #eeb32b;
   --letter-e: #f53d43;
   --letter-t: #22c35d;
@@ -121,17 +141,27 @@
   --danger: #f27a7f;
   --danger-bg: #3a1417;
   --on-gold: #14151a;
-  --mark-facet-light: #b7d4fb;
-  --mark-facet-mid: #6aa5f7;
-  --mark-facet-deep: #1d73ed;
-  --mark-reversed-light: #b7d4fb;
-  --mark-reversed-mid: #6aa5f7;
-  --mark-reversed-deep: #1d73ed;
-  --band-dark: #2a2e3b;
+  --mark-facet-light: #f2748f;
+  --mark-facet-mid: #7aa2f2;
+  --mark-facet-deep: #52c4a0;
+  --mark-reversed-light: #f2748f;
+  --mark-reversed-mid: #7aa2f2;
+  --mark-reversed-deep: #52c4a0;
+  --band-dark: #111214;
   --on-band-dark: #f4f4f2;
   --on-band-dark-muted: #b8bac2;
   --gold-light: #f6d27a;
   --gold-deep: #a8761a;
+  --ruby: #9b1738;
+  --emerald: #12664f;
+  --sapphire: #153e8a;
+  --forest: #244b3e;
+  --sage: #91ad91;
+  --digital: #7aa2f2;
+  --white: #f7f7f4;
+  --obsidian: #111214;
+  --silver: #b9bec4;
+  --gold-canon: #b79a58;
 }
 
 /* Type styles */
