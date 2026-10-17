@@ -41,8 +41,8 @@ def poly(pts, ox=0, oy=0, sc=1):
 # ---- Mark geometry (120 x 103.92 box)
 S=120; H=S*math.sqrt(3)/2
 T=(60,0); Lp=(0,H); Rp=(S,H)
-C=(67.5,63.5)   # off-centre apex: a tetrahedron seen from above and slightly to the right
-G=5.0
+C=(60,58)   # apex on the centreline, above the centroid: a tetrahedron seen from the front and above
+G=6.0
 faces = {
   'left':   facet([T, Lp, C], [0, G/2, G/2]),
   'right':  facet([Rp, T, C], [0, G/2, G/2]),
@@ -50,8 +50,40 @@ faces = {
 }
 MARK_W, MARK_H = S, H
 
-def mark_paths(ox, oy, sc, cols):
-    return "".join(f'<path d="{poly(faces[k],ox,oy,sc)}" fill="{cols[k]}"/>' for k in ('left','right','bottom'))
+def mix(hexcol, other, k):
+    a=[int(hexcol[i:i+2],16) for i in (1,3,5)]; b=[int(other[i:i+2],16) for i in (1,3,5)]
+    return "#"+"".join(f"{round(x+(y-x)*k):02x}" for x,y in zip(a,b))
+
+# Each face is one cut stone: a lighter table in the middle and three bevels around it, the
+# bevel on the upper-left edge lit, the opposite one deep. Channels keep the three stones apart.
+EDGES = {'left': ((0,1),(1,2),(2,0)), 'right': ((1,2),(0,1),(2,0)), 'bottom': ((0,2),(2,1),(0,1))}
+BEVEL = ((('#ffffff',0.22),('#ffffff',0.28,0.0)), (('#000000',0.04),('#000000',0.0,0.12)), (('#000000',0.24),('#000000',0.0,0.14)))
+TABLE = 0.46
+
+def mark_paths(ox, oy, sc, cols, shaded=True, uid="m"):
+    out=""; defs=""
+    T=lambda p:(ox+p[0]*sc, oy+p[1]*sc)
+    def grad(gid, a, b, col, o0, o1):
+        (x1,y1),(x2,y2)=T(a),T(b)
+        return f'<linearGradient id="{gid}" gradientUnits="userSpaceOnUse" x1="{fmt(x1)}" y1="{fmt(y1)}" x2="{fmt(x2)}" y2="{fmt(y2)}"><stop offset="0" stop-color="{col}" stop-opacity="{o0}"/><stop offset="1" stop-color="{col}" stop-opacity="{o1}"/></linearGradient>'
+    for fi,k in enumerate(('left','right','bottom')):
+        pts=faces[k]; base=cols[k]
+        if not shaded:
+            out+=f'<path d="{poly(pts,ox,oy,sc)}" fill="{base}"/>'; continue
+        cn=(sum(p[0] for p in pts)/3, sum(p[1] for p in pts)/3)
+        tab=[(cn[0]+(p[0]-cn[0])*TABLE, cn[1]+(p[1]-cn[1])*TABLE) for p in pts]
+        for j,(a,b) in enumerate(EDGES[k]):
+            (tone,amt),(gcol,g0,g1)=BEVEL[j]
+            quad=[pts[a],pts[b],tab[b],tab[a]]
+            mid=((pts[a][0]+pts[b][0])/2,(pts[a][1]+pts[b][1])/2); tmid=((tab[a][0]+tab[b][0])/2,(tab[a][1]+tab[b][1])/2)
+            gid=f"{uid}{fi}b{j}"; defs+=grad(gid, mid, tmid, gcol, g0, g1)
+            out+=f'<path d="{poly(quad,ox,oy,sc)}" fill="{mix(base,tone,amt)}"/><path d="{poly(quad,ox,oy,sc)}" fill="url(#{gid})"/>'
+        lit=tab[EDGES[k][0][0]]; far=tab[EDGES[k][2][0]]
+        gid=f"{uid}{fi}t"; defs+=grad(gid, lit, far, '#ffffff', 0.34, 0.0)
+        out+=f'<path d="{poly(tab,ox,oy,sc)}" fill="{mix(base,"#ffffff",0.10)}"/><path d="{poly(tab,ox,oy,sc)}" fill="url(#{gid})"/>'
+        gid=f"{uid}{fi}s"; defs+=grad(gid, min(pts, key=lambda p:p[0]+p[1]), max(pts, key=lambda p:p[0]+p[1]), '#000000', 0.0, 0.18)
+        out+=f'<path d="{poly(pts,ox,oy,sc)}" fill="url(#{gid})"/>'
+    return (f"<defs>{defs}</defs>" if defs else "")+out
 
 # ---- Heavy wordmark ETA (filled polygons; overlaps in one colour are invisible)
 CAP=64; W=14.5
@@ -121,19 +153,20 @@ def descriptor(ox, oy, col, target_w, h=11.5, sw=1.9, text="ET ADVISORY"):
     return (f'<path d="{d}" fill="none" stroke="{col}" stroke-width="{sw}" stroke-linejoin="bevel" stroke-linecap="butt" transform="translate(0 {oy})"/>', track)
 
 PAL = {
- 'light': {'left':'#6aa5f7','right':'#1d73ed','bottom':'#0f3c87','ink':'#14151a','bg':'#fbfaf9'},
- 'dark':  {'left':'#b7d4fb','right':'#6aa5f7','bottom':'#1d73ed','ink':'#f4f4f2','bg':'#14151a'},
+ 'light': {'left':'#9b1738','right':'#153e8a','bottom':'#12664f','ink':'#14151a','bg':'#fbfaf9'},
+ 'dark':  {'left':'#f2748f','right':'#7aa2f2','bottom':'#52c4a0','ink':'#f4f4f2','bg':'#111214'},
  'mono':  {'left':'#14151a','right':'#14151a','bottom':'#14151a','ink':'#14151a','bg':'#fbfaf9'},
- 'mono-paper': {'left':'#ffffff','right':'#ffffff','bottom':'#ffffff','ink':'#ffffff','bg':'#14151a'},
+ 'mono-paper': {'left':'#f4f4f2','right':'#f4f4f2','bottom':'#f4f4f2','ink':'#f4f4f2','bg':'#111214'},
  'gold':  {'left':'#f6d27a','right':'#eeb32b','bottom':'#a8761a','ink':'#f4f4f2','bg':'#14151a'},
 }
 
 def svg(w,h,body,title):
     return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {fmt(w)} {fmt(h)}" width="{fmt(w)}" height="{fmt(h)}" role="img" aria-label="{title}"><title>{title}</title>{body}</svg>'
 
+FLAT={'mono','mono-paper'}
 def mark_svg(pal, pad=0):
     p=PAL[pal]
-    return svg(MARK_W+2*pad, MARK_H+2*pad, mark_paths(pad,pad,1,p), "ET Advisory mark")
+    return svg(MARK_W+2*pad, MARK_H+2*pad, mark_paths(pad,pad,1,p,pal not in FLAT), "ET Advisory mark")
 
 def horizontal(pal):
     p=PAL[pal]
@@ -141,7 +174,7 @@ def horizontal(pal):
     wm,_=wordmark(MARK_W+gap, ty, p['ink'])
     ds,_=descriptor(MARK_W+gap, MARK_H-11.5, p['ink'], WM_W)
     w=MARK_W+gap+WM_W
-    return svg(w, MARK_H+1, mark_paths(0,0,1,p)+wm+ds, "ET Advisory")
+    return svg(w, MARK_H+1, mark_paths(0,0,1,p,pal not in FLAT)+wm+ds, "ET Advisory")
 
 def stacked(pal):
     p=PAL[pal]
@@ -152,7 +185,7 @@ def stacked(pal):
     dy=wy+CAP+17
     ds,_=descriptor((w-WM_W)/2, dy, p['ink'], WM_W)
     h=dy+11.5+1.5
-    return svg(w, h, mark_paths(mx,0,1,p)+wm+ds, "ET Advisory")
+    return svg(w, h, mark_paths(mx,0,1,p,pal not in FLAT)+wm+ds, "ET Advisory")
 
 def wordmark_svg(pal):
     p=PAL[pal]
@@ -160,13 +193,13 @@ def wordmark_svg(pal):
     ds,_=descriptor(0, CAP+17, p['ink'], WM_W)
     return svg(WM_W, CAP+17+11.5+1.5, wm+ds, "ET Advisory")
 
-def app_icon(size=512, pal='dark', bg='#14151a'):
+def app_icon(size=512, pal='dark', bg='#111214'):
     p=PAL[pal]
     sc=size*0.56/MARK_W
     mw, mh = MARK_W*sc, MARK_H*sc
     # optical centring: triangle centroid sits at 2/3 height; nudge up slightly from box centre
     ox=(size-mw)/2; oy=(size-mh)/2 - size*0.025
-    body=f'<rect width="{size}" height="{size}" rx="{size*0.22}" fill="{bg}"/>'+mark_paths(ox,oy,sc,p)
+    body=f'<rect width="{size}" height="{size}" rx="{size*0.22}" fill="{bg}"/>'+mark_paths(ox,oy,sc,p,True)
     return svg(size,size,body,"ET Advisory app icon")
 
 files = {

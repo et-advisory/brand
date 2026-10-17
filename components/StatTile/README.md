@@ -1,6 +1,6 @@
 # StatTile
 
-StatTile is a card that leads with one big numeral, then a label and a source line.
+StatTile is an `ETA.Card` that leads with one big numeral, then a label; its source line is the card footer.
 
 **The consumer provides** the figure, a label that says what it counts, and a source. Render it as `<ETA.StatTile value="3" label="Service lines" source="ETA offerings" />` inside an `ETA.StatRow`, which lays out two to four tiles. Leave `value` out to show the `[00]` placeholder; the source line always shows, reading `[add before use]` until one is given.
 

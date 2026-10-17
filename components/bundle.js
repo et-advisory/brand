@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"ETA","components":[{"name":"Logo"},{"name":"Button"},{"name":"Badge"},{"name":"StatusChip"},{"name":"StatTile"},{"name":"ServiceCard"},{"name":"Eyebrow"},{"name":"SectionHeading"}]} */
+/* @ds-bundle: {"format":4,"namespace":"ETA","components":[{"name":"Logo"},{"name":"Button"},{"name":"Badge"},{"name":"StatusChip"},{"name":"Card"},{"name":"CardFooter"},{"name":"StatTile"},{"name":"ServiceCard"},{"name":"Eyebrow"},{"name":"SectionHeading"}]} */
 (function () {
   "use strict";
   var React = window.React;
@@ -43,11 +43,20 @@
   }
 
   /* ---------- StatTile and StatRow ---------- */
+  /* ---------- Card and CardFooter ---------- */
+  function CardFooter(props) {
+    return h("footer", Object.assign({ className: cx("eta-card-footer", props.className) }, omit(props, ["className", "children"])), props.children);
+  }
+  function Card(props) {
+    return h("div", Object.assign({ className: cx("eta-card", props.className) }, omit(props, ["footer", "className", "children"])),
+      h("div", { className: "eta-card-body" }, props.children),
+      props.footer == null ? null : h(CardFooter, null, props.footer));
+  }
+
   function StatTile(props) {
-    return h("div", Object.assign({ className: cx("eta-stat", props.className) }, omit(props, ["value", "label", "source", "className"])),
+    return h(Card, Object.assign({ className: cx("eta-stat", props.className), footer: "Source: " + (props.source || "[add before use]") }, omit(props, ["value", "label", "source", "className"])),
       h("span", { className: "eta-stat-value" }, props.value == null ? "[00]" : props.value),
-      h("span", { className: "eta-stat-label" }, props.label),
-      h("span", { className: "eta-stat-source" }, "Source: " + (props.source || "[add before use]")));
+      h("span", { className: "eta-stat-label" }, props.label));
   }
   function StatRow(props) {
     var n = React.Children.count(props.children);
@@ -166,6 +175,6 @@
       h("title", null, label), kids);
   }
 
-  var api = { Button: Button, Badge: Badge, StatusChip: StatusChip, StatTile: StatTile, StatRow: StatRow, ServiceCard: ServiceCard, ServiceRow: ServiceRow, Eyebrow: Eyebrow, SectionHeading: SectionHeading, Logo: Logo, SERVICES: SERVICES };
+  var api = { Button: Button, Badge: Badge, StatusChip: StatusChip, Card: Card, CardFooter: CardFooter, StatTile: StatTile, StatRow: StatRow, ServiceCard: ServiceCard, ServiceRow: ServiceRow, Eyebrow: Eyebrow, SectionHeading: SectionHeading, Logo: Logo, SERVICES: SERVICES };
   window.ETA = Object.assign(window.ETA || {}, api);
 })();

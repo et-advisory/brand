@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.1.0 (2026-10-17)
+
+- Logo: the mark is a true tetrahedron, apex on the centreline above the centroid (`C=(60,58)`), channels widened to 6; each face is a cut stone with a table and three bevels, lit from the upper left, in Ruby, Sapphire and Emerald; mono variants stay flat. All twelve SVGs regenerated from `scripts/logo/generate.py`. The PNG exports and `ETA.Logo` in the component bundle still show the 3.0.0 geometry until re-exported and rebuilt.
+- Components: added `ETA.Card` with `ETA.CardFooter` (the footer carries a card's source, credit or links); `ETA.StatTile` is now a Card whose footer is its source line. `index.d.ts`, `bundle.js` and `bundle.css` updated by hand; rebuild the bundle to confirm.
+- Photography: added `assets/scenes/` (four licence-free aerial grounds for the site's story scenes, with credits) and the scene treatment recipe.
+- Graphic language: documented the scene drawing kinds the site draws over the grounds.
+- The "ET Advisory" Design System artifact on claude.ai carries the same logos, grounds and README text (Version 42).
+
 ## 3.0.0 (2026-10-15)
 
 Brand Evolution 13 is the canon. Replaces Royal Blue (v2) and the short-lived Evolution 12.
