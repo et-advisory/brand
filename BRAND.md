@@ -39,7 +39,7 @@ Never "ETA — Gold SPV Coordination", "ERA", or "ETA" alone as a product name.
 
 ## Mark
 
-`eta-mark.svg`: the η core inside the gold triangle, with τ, ε and α nodes. Glyphs are outlined, so it renders the same everywhere.
+`eta-mark.svg`: a copy of `logos/eta-mark.svg` (the three-stone tetrahedron), written by `scripts/logo/generate.py`. Outlined paths, so it renders the same everywhere.
 Minimum size 16px (favicon). Do not recolour, rotate, or place it on a fill darker than `--muted`.
 
 ## Colour

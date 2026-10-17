@@ -19,7 +19,7 @@ ET Advisory helps founders and asset owners close capital raises, with a focus o
 | `components/<Name>/` | Guidelines (`README.md`) and a standalone `preview.html` for each component. |
 | `index.html` | A gallery of the logos and every component preview. |
 | `scripts/build-tokens.mjs` | Rebuilds `tokens.css` from `tokens.json`. |
-| `scripts/logo/generate.py` | Regenerates every logo SVG from its geometry. |
+| `scripts/logo/generate.py` | Regenerates every logo SVG, the root `eta-mark.svg` and the mark data in `components/bundle.js`. |
 
 ## Viewing the gallery
 
@@ -92,6 +92,8 @@ Emerald text (`text-primary`, `text-eta-accent`) resolves to `accent-strong`; Em
 | `Button` | `variant`: primary, secondary, outline, ghost, link, inverse, onDark · `size`: 32, 40, 48 · `href` or `onClick` |
 | `Badge` | `tone`: neutral, accent, gold |
 | `StatusChip` | `tone`: neutral, info, success, pending, danger |
+| `Card` / `CardFooter` | `title`, `icon` (a Lucide SVG node), `footer`, `level` (2 to 4, default 3); `CardFooter` is the footer on its own |
+| `Gallery` | `columns`: 2, 3, 4 (default 3) · `ordered` renders an `ol`; each child gets its own list item |
 | `StatTile` / `StatRow` | `value`, `label`, `source` (no `value` shows `[00]`); a row holds two to four tiles |
 | `ServiceCard` / `ServiceRow` | the row always renders exactly three, 01 to 03; `items` rewords them |
 | `Eyebrow` | `size`: default (12px), slide (24px) |
@@ -103,7 +105,7 @@ Full prop types are in `components/index.d.ts`; rules for each are in its `READM
 
 - **Components:** edit `components/bundle.js` and `components/bundle.css` directly (plain JavaScript, no build step), keep `components/index.d.ts` in step, and check every preview in both themes.
 - **Tokens:** edit `tokens/tokens.json`, then run `npm run build:tokens`. Every color needs a value for each theme and a usage note.
-- **Logo:** edit the geometry in `scripts/logo/generate.py` and run `npm run build:logos`, then re-export `logos/eta-app-icon-512.png` from `eta-app-icon.svg`. Never hand-edit or redraw the SVGs.
+- **Logo:** edit the geometry in `scripts/logo/generate.py` and run `npm run build:logos`, which also updates the mark in `components/bundle.js`, then re-export `logos/*.png` from the SVGs at their existing pixel sizes. Never hand-edit or redraw the SVGs or the bundle's `G`.
 - Record every change in `CHANGELOG.md`.
 
 ## Open decisions

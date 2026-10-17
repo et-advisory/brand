@@ -52,9 +52,9 @@ iframe{width:100%;border:1px solid var(--line);border-radius:var(--radius-lg);ba
 <a class="logo" href="logos/eta-app-icon.svg" download><img src="logos/eta-app-icon.svg" alt="eta-app-icon.svg"><span>eta-app-icon.svg</span></a>
 </div></section>
 <section id="Cover"><h2>Cover</h2><p class="sum">The palette and pattern the system is remembered by.</p><iframe src="components/Cover/preview.html" style="height:336px" loading="lazy" title="Cover preview"></iframe></section>
-<section id="Logo"><h2>Logo</h2><p class="sum">Logo draws the proposed ETA mark (2026-10-09) and its lockups as inline SVG bound to the mark tokens, so the same markup works in both themes.
+<section id="Logo"><h2>Logo</h2><p class="sum">Logo draws the ETA mark and its lockups as inline SVG from the same data as `logos/*.svg`, so the same markup works in both themes.
 
-**Status.** Proposed, pending ratification.</p><iframe src="components/Logo/preview.html" style="height:1200px" loading="lazy" title="Logo preview"></iframe><p class="more"><a href="components/Logo/README.md">Guidelines</a></p></section>
+**Status.** Adopted with the Brand Evolution 12 canon (2026-10-14): a tetrahedron of three cut stones, Ruby left, Sapphire right, Emerald bottom.</p><iframe src="components/Logo/preview.html" style="height:1200px" loading="lazy" title="Logo preview"></iframe><p class="more"><a href="components/Logo/README.md">Guidelines</a></p></section>
 <section id="BrandApplications"><h2>BrandApplications</h2><p class="sum">BrandApplications shows the logo at work on the business card, email signature and social profile, as reference layouts rather than a reusable component.
 
 **The consumer provides** the person's real name, title and contact lines; the preview shows placeholders and invents no one.
@@ -69,7 +69,13 @@ iframe{width:100%;border:1px solid var(--line);border-radius:var(--radius-lg);ba
 <section id="StatusChip"><h2>StatusChip</h2><p class="sum">StatusChip shows the state of an item as a dot plus a word, in five tones: `neutral`, `info`, `success`, `pending` and `danger`.
 
 **The consumer provides** the status word and the tone.</p><iframe src="components/StatusChip/preview.html" style="height:210px" loading="lazy" title="StatusChip preview"></iframe><p class="more"><a href="components/StatusChip/README.md">Guidelines</a></p></section>
-<section id="StatTile"><h2>StatTile</h2><p class="sum">StatTile is a card that leads with one big numeral, then a label and a source line.
+<section id="Card"><h2>Card</h2><p class="sum">Card is the bordered panel every tile and case study sits in, with four fixed slots: an optional icon tile, a title, the content, and a footer for provenance.
+
+**The consumer provides** the content, a `title` when the card names one thing, an `icon` when a row needs a glance-level cue, and a `footer` when the content makes a claim.</p><iframe src="components/Card/preview.html" style="height:280px" loading="lazy" title="Card preview"></iframe><p class="more"><a href="components/Card/README.md">Guidelines</a></p></section>
+<section id="Gallery"><h2>Gallery</h2><p class="sum">Gallery is the grid every set of cards sits in: two to four columns, one fixed gap, every card in a row the same height so footers align.
+
+**The consumer provides** the cards as children and, optionally, `columns` and `ordered`.</p><iframe src="components/Gallery/preview.html" style="height:280px" loading="lazy" title="Gallery preview"></iframe><p class="more"><a href="components/Gallery/README.md">Guidelines</a></p></section>
+<section id="StatTile"><h2>StatTile</h2><p class="sum">StatTile is an `ETA.Card` that leads with one big numeral, then a label; its source line is the card footer.
 
 **The consumer provides** the figure, a label that says what it counts, and a source.</p><iframe src="components/StatTile/preview.html" style="height:210px" loading="lazy" title="StatTile preview"></iframe><p class="more"><a href="components/StatTile/README.md">Guidelines</a></p></section>
 <section id="ServiceCard"><h2>ServiceCard</h2><p class="sum">ServiceCard presents one of ETA's three offerings as a numbered card; the row is always exactly three, numbered 01 to 03.
