@@ -20,6 +20,7 @@ ET Advisory helps founders and asset owners close capital raises, with a focus o
 | `index.html` | A gallery of the logos and every component preview. |
 | `scripts/build-tokens.mjs` | Rebuilds `tokens.css` from `tokens.json`. |
 | `scripts/logo/generate.py` | Regenerates every logo SVG, the root `eta-mark.svg` and the mark data in `components/bundle.js`. |
+| `check.mjs` | Contrast check of every colour pair the preset pairs up, in both themes (`npm run check`). |
 
 ## Viewing the gallery
 
@@ -64,7 +65,7 @@ import brand from "@et-advisory/brand/preset";
 export default { presets: [brand], content: ["./src/**/*.{ts,tsx}"] };
 ```
 
-Emerald text (`text-primary`, `text-eta-accent`) resolves to `accent-strong`; Emerald fills resolve to `accent-fill`. `eta-digital`, `eta-sapphire`, `eta-emerald`, `eta-ruby`, `eta-white`, `eta-obsidian`, `eta-silver` and `eta-gold-canon` carry the canon swatches.
+Emerald text (`text-primary`, `text-eta-accent`) resolves to `accent-strong`; Emerald fills resolve to `accent-fill`. `accent` is shadcn's hover and highlight fill (Line), not Emerald. Dark styles (`dark:`) follow the same switch as `tokens.css`: the OS scheme, unless `data-theme` on `<html>` pins one. `eta-digital`, `eta-sapphire`, `eta-emerald`, `eta-ruby`, `eta-white`, `eta-obsidian`, `eta-silver` and `eta-gold-canon` carry the canon swatches.
 
 ## Using the components
 
@@ -101,11 +102,18 @@ Emerald text (`text-primary`, `text-eta-accent`) resolves to `accent-strong`; Em
 
 Full prop types are in `components/index.d.ts`; rules for each are in its `README.md`.
 
+## Using shadcn/ui
+
+The preset is the shadcn theme: stock shadcn components (Tailwind 3, "default" style) use `bg-background`, `bg-primary`, `bg-accent`, `border-input` and so on, which resolve to the tokens. Charts use `chart-1` to `chart-5` and the sidebar uses `sidebar-*`.
+
+There are no shadcn CSS variables (`--background`, `--primary`), because the tokens already own `--accent` and `--card` with brand meanings. In `components.json` keep `"cssVariables": true` so added components use the class names above, and after `npx shadcn add` delete any `:root` variables the CLI writes into your CSS (only chart and sidebar add them).
+
 ## Changing things
 
 - **Components:** edit `components/bundle.js` and `components/bundle.css` directly (plain JavaScript, no build step), keep `components/index.d.ts` in step, and check every preview in both themes.
 - **Tokens:** edit `tokens/tokens.json`, then run `npm run build:tokens`. Every color needs a value for each theme and a usage note.
 - **Logo:** edit the geometry in `scripts/logo/generate.py` and run `npm run build:logos`, which also updates the mark in `components/bundle.js`, then re-export `logos/*.png` from the SVGs at their existing pixel sizes. Never hand-edit or redraw the SVGs or the bundle's `G`.
+- **Colours:** run `npm run check` after changing a colour token or a preset pair; it fails under 4.5:1 for text and 3:1 for borders, rings and chart marks.
 - Record every change in `CHANGELOG.md`.
 
 ## Open decisions

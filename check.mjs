@@ -1,23 +1,29 @@
-// WCAG contrast gate for brand.css. `node check.mjs`; exits 1 on any failure.
+// WCAG contrast gate for the preset's colour pairs in every theme. `node check.mjs`; exits 1 on any failure.
 import { readFileSync } from "node:fs";
+import preset from "./preset.js";
 
-const css = readFileSync(new URL("./brand.css", import.meta.url), "utf8");
-const raw = Object.fromEntries([...css.matchAll(/--([\w-]+):\s*([^;]+);/g)].map((m) => [m[1], m[2].trim()]));
-const val = (k) => {
-  const v = raw[k];
-  if (v === undefined) throw new Error(`--${k} is not defined`);
-  const alias = v.match(/^var\(--([\w-]+)\)$/);
-  return alias ? val(alias[1]) : v;
+const tokens = JSON.parse(readFileSync(new URL("./tokens/tokens.json", import.meta.url), "utf8"));
+const themes = tokens.color.themes.map((t) => t.id);
+const hex = Object.fromEntries(tokens.color.tokens.map((t) => [t.name, t.value]));
+const { colors, textColor } = preset.theme.extend;
+
+// "primary-foreground" -> colors.primary.foreground -> "--on-accent"; text: names read textColor.
+const tokenOf = (name, table = colors) => {
+  const parts = name.split("-");
+  for (let i = parts.length; i > 0; i--) {
+    let v = table[parts.slice(0, i).join("-")];
+    const rest = parts.slice(i).join("-");
+    if (v && typeof v === "object") v = rest ? v[rest] : v.DEFAULT;
+    else if (rest) v = undefined;
+    if (typeof v === "string") return v.match(/var\(--([\w-]+)\)/)[1];
+  }
+  throw new Error(`${name} is not in the preset`);
 };
-
-const rgb = (k) => {
-  const [h, s, l] = val(k).replace(/%/g, "").split(/\s+/).map(Number);
-  const a = (s / 100) * Math.min(l / 100, 1 - l / 100);
-  const f = (n) => {
-    const t = (n + h / 30) % 12;
-    return l / 100 - a * Math.max(-1, Math.min(t - 3, 9 - t, 1));
-  };
-  return [f(0), f(8), f(4)];
+const resolve = (name) => (name.startsWith("text:") ? tokenOf(name.slice(5), textColor) : tokenOf(name));
+const rgb = (name, theme) => {
+  const v = hex[resolve(name)];
+  const h = typeof v === "string" ? v : v[theme] ?? v[themes[0]];
+  return [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16) / 255);
 };
 const over = (top, alpha, under) => top.map((c, i) => c * alpha + under[i] * (1 - alpha));
 const lum = (c) => c.map((x) => (x <= 0.04045 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4)).reduce((s, x, i) => s + x * [0.2126, 0.7152, 0.0722][i], 0);
@@ -29,35 +35,45 @@ const ratio = (a, b) => {
 const TEXT = 4.5, UI = 3;
 const pairs = [
   ["foreground", "background", TEXT],
-  ["foreground", "card", TEXT],
+  ["card-foreground", "card", TEXT],
+  ["popover-foreground", "popover", TEXT],
   ["muted-foreground", "background", TEXT],
   ["muted-foreground", "card", TEXT],
   ["muted-foreground", "muted", TEXT],
-  ["primary", "background", TEXT],
-  ["primary", "card", TEXT],
+  ["text:primary", "background", TEXT],
+  ["text:primary", "card", TEXT],
   ["primary-foreground", "primary", TEXT],
-  ["primary-foreground", "eta-accent-hover", TEXT],
   ["secondary-foreground", "secondary", TEXT],
+  ["accent-foreground", "accent", TEXT],
+  ["muted-foreground", "accent", TEXT],
   ["destructive", "card", TEXT],
   ["destructive-foreground", "destructive", TEXT],
-  ["eta-status-progress-fg", "eta-status-progress", TEXT],
-  ["eta-status-active-fg", "eta-status-active", TEXT],
+  ["success-foreground", "success", TEXT],
+  ["warning-foreground", "warning", TEXT],
+  ["danger-foreground", "danger", TEXT],
+  ["success", "success-bg", TEXT],
+  ["warning", "warning-bg", TEXT],
+  ["danger", "danger-bg", TEXT],
   ["eta-status-info-fg", "eta-status-info", TEXT],
   ["eta-status-planned-fg", "eta-status-planned", TEXT],
-  ["primary-foreground", "eta-status-active-fg", TEXT],
-  ["eta-status-blocked-fg", "eta-status-blocked", TEXT],
+  ["sidebar-foreground", "sidebar", TEXT],
+  ["sidebar-primary-foreground", "sidebar-primary", TEXT],
+  ["sidebar-accent-foreground", "sidebar-accent", TEXT],
   ["input", "background", UI],
   ["input", "card", UI],
   ["ring", "card", UI],
-].map(([fg, bg, min]) => [`${fg} on ${bg}`, ratio(rgb(fg), rgb(bg)), min]);
-
-// shadcn buttons hover at bg-primary/90 over the card.
-pairs.push(["primary-foreground on primary/90", ratio(rgb("primary-foreground"), over(rgb("primary"), 0.9, rgb("card"))), TEXT]);
+  ...[1, 2, 3, 4, 5].map((n) => [`chart-${n}`, "card", UI]),
+];
 
 let failed = 0;
-for (const [name, r, min] of pairs) {
-  const ok = r >= min;
-  if (!ok) failed++;
-  console.log(`${ok ? "ok  " : "FAIL"} ${r.toFixed(2).padStart(5)}:1 (min ${min}) ${name}`);
+for (const theme of themes) {
+  const rows = pairs.map(([fg, bg, min]) => [`${fg} on ${bg}`, ratio(rgb(fg, theme), rgb(bg, theme)), min]);
+  // shadcn buttons hover at bg-primary/90 over the card.
+  rows.push(["primary-foreground on primary/90", ratio(rgb("primary-foreground", theme), over(rgb("primary", theme), 0.9, rgb("card", theme))), TEXT]);
+  for (const [name, r, min] of rows) {
+    const ok = r >= min;
+    if (!ok) failed++;
+    console.log(`${ok ? "ok  " : "FAIL"} ${theme.padEnd(5)} ${r.toFixed(2).padStart(5)}:1 (min ${min}) ${name}`);
+  }
 }
 process.exit(failed ? 1 : 0);

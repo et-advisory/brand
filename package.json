@@ -26,7 +26,8 @@
   "scripts": {
     "build:tokens": "node scripts/build-tokens.mjs",
     "build:logos": "python3 scripts/logo/generate.py",
-    "build": "npm run build:tokens && npm run build:logos"
+    "build": "npm run build:tokens && npm run build:logos",
+    "check": "node check.mjs"
   },
   "types": "./components/index.d.ts",
   "peerDependencies": {

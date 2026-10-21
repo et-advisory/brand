@@ -1,5 +1,6 @@
 // Tailwind 3 preset over tokens/tokens.css. Load tokens.css before Tailwind's layers.
-// Tokens are hex, so color-mix carries the /opacity modifiers.
+// Tokens are hex, so color-mix carries the /opacity modifiers. shadcn/ui reads the theme through these
+// class names; the brand already owns --accent and --card, so there are no shadcn CSS variables.
 const c = (token) => `color-mix(in srgb, var(--${token}) calc(<alpha-value> * 100%), transparent)`;
 const pair = (bg, fg) => ({ DEFAULT: c(bg), foreground: c(fg) });
 
@@ -47,7 +48,8 @@ const base = ({ addBase, addUtilities }) => {
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: ["class"],
+  // Same switch as tokens.css: the OS scheme unless data-theme pins one.
+  darkMode: ["variant", ["@media (prefers-color-scheme: dark) { &:not(:where([data-theme=light] *)) }", "&:where([data-theme=dark] *)"]],
   theme: {
     container: { center: true, padding: "2rem", screens: { "2xl": "1400px" } },
     extend: {
@@ -66,12 +68,30 @@ export default {
         secondary: pair("surface", "ink"),
         destructive: pair("danger", "on-accent"),
         muted: pair("surface", "ink-muted"),
-        accent: pair("accent-fill", "on-accent"),
+        // shadcn's hover and highlight fill on menus, selects and ghost buttons; Emerald fills are primary.
+        accent: pair("line", "ink"),
         popover: pair("card", "ink"),
         card: pair("card", "ink"),
-        success: { DEFAULT: c("success"), bg: c("success-bg") },
-        warning: { DEFAULT: c("warning"), bg: c("warning-bg") },
-        danger: { DEFAULT: c("danger"), bg: c("danger-bg") },
+        success: { DEFAULT: c("success"), foreground: c("on-accent"), bg: c("success-bg") },
+        warning: { DEFAULT: c("warning"), foreground: c("on-accent"), bg: c("warning-bg") },
+        danger: { DEFAULT: c("danger"), foreground: c("on-accent"), bg: c("danger-bg") },
+        chart: {
+          1: c("mark-facet-deep"),
+          2: c("mark-facet-mid"),
+          3: c("warning"),
+          4: c("mark-facet-light"),
+          5: c("ink-muted"),
+        },
+        sidebar: {
+          DEFAULT: c("surface"),
+          foreground: c("ink"),
+          primary: c("accent-fill"),
+          "primary-foreground": c("on-accent"),
+          accent: c("line"),
+          "accent-foreground": c("ink"),
+          border: c("line"),
+          ring: c("accent"),
+        },
         eta: {
           ink: c("ink"),
           "band-dark": c("band-dark"),
