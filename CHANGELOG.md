@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.3.0 (2026-10-21)
+
+- Preset: shadcn/ui theme. `accent` is the subtle hover and highlight fill (Line on Ink) that shadcn menus, selects, command lists and ghost buttons use; it was a solid Emerald fill, so those turned green on hover. Use `primary` for Emerald fills.
+- Preset: added `chart-1` to `chart-5` (Emerald, Sapphire, Warning, Ruby, ink-muted facets, theme-aware), `sidebar-*`, and `foreground` for `success`, `warning` and `danger`.
+- Preset: `dark:` follows the OS scheme unless `data-theme` pins one, the same switch as `tokens.css`. It used to need a `.dark` class that nothing set.
+- `check.mjs` checks the preset's pairs against `tokens.json` in both themes (`npm run check`); every pair passes. It used to read the v1 `brand.css`.
+- Removed the v1 `brand.css` and root `BRAND.md` (Royal Blue, light only, not exported); `docs/BRAND.md` is the brand book.
+- README: a shadcn/ui section.
+
 ## 3.2.1 (2026-10-17)
 
 - Logo: `ETA.Logo` draws the 3.2 mark. `scripts/logo/generate.py` writes the mark data (faces, tables, bevels, gradient stops per tone) into `components/bundle.js` and the root `eta-mark.svg`, so the component and the SVG files render the same pixels. Gradient ids are unique per Logo instance; `tone="color"` still switches to the reversed stones in the dark theme.

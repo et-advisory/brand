@@ -1,6 +1,6 @@
 {
   "name": "et-advisory",
-  "version": "3.2.1",
+  "version": "3.3.0",
   "private": true,
   "description": "ET Advisory (ETA) brand system: design tokens, logo files, live React components and brand book.",
   "license": "UNLICENSED",
