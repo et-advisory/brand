@@ -5,7 +5,7 @@ free for commercial use without attribution under the Unsplash License
 (https://unsplash.com/license) or the Pexels License (https://www.pexels.com/license/);
 the licence was read on each photo page when fetched on 2026-10-16. Credit lines are kept
 here as a courtesy. Files are re-encoded with ffmpeg at 1600px wide, JPEG baseline; the
-desaturate-and-darken treatment is applied in CSS (the site's `docs/story/VISUALS.md`), not
+plate and ground treatments are applied in CSS (`docs/BRAND.md`, Visual foundations), not
 baked in.
 
 | File | Chapter | Subject | Photographer | Source |
