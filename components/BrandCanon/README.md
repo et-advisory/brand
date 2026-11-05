@@ -6,7 +6,7 @@ BrandCanon is the reference layout for Brand Evolution 13: the tagline plate and
 
 **Tagline plate.** PHYSICAL ACTUALITY. DIGITAL POSSIBILITY. in wide-tracked 600-weight caps, `on-band-dark` on `band-dark` (Obsidian), radius `radius-md`. Once per surface, never inside a card.
 
-**Campaign line.** A new market for the real world. in Inter 900, `ink`, tight tracking, with the supporting line in `ink-muted`. The period stays.
+**Campaign line.** "Now the real world has a market of its own." in Inter 900, `ink`, tight tracking, with the supporting line in `ink-muted`. The period stays.
 
 **Palette.** Ruby (`ruby`), Emerald (`accent`), Sapphire (`digital`), White (`white`), Obsidian (`band-dark`), Silver (`silver`), Gold (`gold-canon`). Emerald speaks for the interface, Sapphire marks the digital layer, Ruby stays in the mark; Silver and Gold are metals for thin linework.
 

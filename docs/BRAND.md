@@ -9,7 +9,7 @@ ET Advisory (ETA) helps founders and asset owners close capital raises, with a f
 | Element | Canon |
 | --- | --- |
 | Tagline | PHYSICAL ACTUALITY. DIGITAL POSSIBILITY. Wide-tracked caps, white on an `obsidian` plate. The Evolution 12 and 13 boards both print "physical value"; Erik set "physical actuality" on 2026-10-14 and that wording governs until he rules otherwise on the 13 board. |
-| Campaign line | A new market for the real world. Heavy Inter, `ink`, with the supporting line "Ownership is going online, just as information did." beneath it in `ink-muted`. |
+| Campaign line | Now the real world has a market of its own. Heavy Inter, `ink`, with the supporting line "Ownership is going online, just as information did." beneath it in `ink-muted`. |
 | Story line | Own a share of something real, right from the palm of your hand. |
 | Story body | Land, properties, utilities and resources hold much of the world's value, and now you can own a share of them and trade it as easily as anything else online. |
 | Our role | We connect the asset you own to a clear digital record and the rights your investors can hold. |
