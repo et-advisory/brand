@@ -88,10 +88,25 @@ Carried over from Evolution 12 and not on the 13 board: Forest `#244B3E` (`fores
 
 ## Content fundamentals
 
-- Sentence case, a period on headlines, no emoji, no exclamation marks, no first-person singular. Em dashes are allowed in the source voice; this team avoids them in deck copy.
-- Fixed calls to action: Initiate Contact, Explore our services, Get started, Learn About ETA, Continue.
-- Lead with the claim, then the proof. A header is an argument, not a headcount.
-- Short declaratives in pairs, as the canon does: the physical world first, its digital chapter second.
+The voice is Apple-style: confident, warm and benefit-led. The copy is about the reader and what changes for them before it is about the firm.
+
+- **One idea per headline, written as a full thought.** Usually one sentence, 12 words or fewer, in sentence case with a period.
+- **Lead with what the reader gets, then show how.** Write about the reader before the firm: "you" leads and "we" follows, with ETA as "we" doing something for the reader.
+- **Copy that talks.** The paragraph under a headline runs 45 words or fewer, reads like conversation and carries one benefit. Contractions are welcome (we'll, you're, it's).
+- **Concrete verbs.** Map, build, raise, own, hold, run, keep, show.
+- **Banned abstractions.** Architecture, ecosystem (as a claim), alignment (outside α Alignment), leverage, holistic, inflection point, mutual success.
+- **Banned shapes.** No short paired declaratives, no "X, not Y", no "Not X. Y." fragments, no slogan triads, no em dashes and no exclamation marks.
+- **Kept from the earlier voice.** Sentence case, a period on headlines, no emoji, no first-person singular, short eyebrows, a source on every figure, and `[00]` until a figure is verified.
+- **Wordplay.** Light and occasional, on story pages only (on the site, home and offerings). Cases, contact, the appendix and legal stay plain and direct.
+- **Calls to action.** A verb plus what the reader gets. The primary call to action is Talk with our team. Links: See how we work, Meet the team, See the case studies, Learn more. Inside a flow: Get started, Continue. A "Learn more" link carries a Lucide `ChevronRight`, never a `›` glyph.
+- **Fixed marks.** ε Exactness, τ Totality, α Alignment and the tagline PHYSICAL ACTUALITY. DIGITAL POSSIBILITY. are never rewritten.
+
+| Before | After |
+| --- | --- |
+| Two offerings. One studio. | One studio for the two biggest moves a growing business makes. |
+| Architecture, not just advice. | We build the structure with you, then stay until it holds. |
+| Let's discover the path for mutual success. | Tell us where you are, and we'll show you what comes next. |
+| Initiate Contact | Talk with our team |
 
 ## Visual foundations
 

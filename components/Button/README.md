@@ -2,7 +2,7 @@
 
 Button is the action control in seven variants (`primary`, `secondary`, `outline`, `ghost`, `link`, `inverse`, `onDark`) and three heights (32, 40, 48px).
 
-**The consumer provides** a label from the fixed call-to-action vocabulary (Initiate Contact, Explore our services, Get started, Learn About ETA, Continue) and an `href` or click handler. Render it as `ETA.Button` with `variant`, `size` (32, 40 or 48) and either `href` (renders an `a`) or `onClick`; for example `<ETA.Button variant="primary" size={48} href="/contact">Initiate Contact</ETA.Button>`.
+**The consumer provides** a verb-led label that names what the reader gets (Talk with our team, See how we work, Meet the team, Get started, Learn more, Continue) and an `href` or click handler. Render it as `ETA.Button` with `variant`, `size` (32, 40 or 48) and either `href` (renders an `a`) or `onClick`; for example `<ETA.Button variant="primary" size={48} href="/contact">Talk with our team</ETA.Button>`.
 
 **When to use.** One `primary` per view. `secondary` and `outline` for the next-best action, `ghost` in toolbars, `link` inside running text, `inverse` where the page already carries a lot of Emerald, `onDark` only on an `band-dark` ground.
 

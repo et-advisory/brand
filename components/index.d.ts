@@ -49,7 +49,7 @@ export declare const SERVICES: ReadonlyArray<{ number: string; title: string; de
 export interface EyebrowProps extends React.HTMLAttributes<HTMLElement> { as?: keyof JSX.IntrinsicElements; size?: 'default' | 'slide'; children?: React.ReactNode }
 export declare function Eyebrow(props: EyebrowProps): React.ReactElement;
 
-/** Opens a section: eyebrow, an argument headline ending in a period, optional lead. */
+/** Opens a section: eyebrow, a one-thought headline about the reader ending in a period, optional lead. */
 export interface SectionHeadingProps extends React.HTMLAttributes<HTMLDivElement> { eyebrow?: React.ReactNode; title: React.ReactNode; lead?: React.ReactNode; level?: 1 | 2 | 3; align?: 'start' | 'center' }
 export declare function SectionHeading(props: SectionHeadingProps): React.ReactElement;
 

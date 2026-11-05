@@ -21,13 +21,13 @@ function G(label, child, cls) { return h("div", { className: "group" }, h("span"
 var sizes = [32, 40, 48];
 function set(variant, label) { return sizes.map(function (s) { return h(E.Button, { key: s, variant: variant, size: s }, label); }); }
 ReactDOM.createRoot(document.getElementById("root")).render(h("div", { className: "stack" },
-  G("primary", set("primary", "Initiate Contact")),
-  G("secondary", set("secondary", "Initiate Contact")),
-  G("outline", set("outline", "Explore our services")),
+  G("primary", set("primary", "Talk with our team")),
+  G("secondary", set("secondary", "See how we work")),
+  G("outline", set("outline", "Meet the team")),
   G("ghost", set("ghost", "Continue")),
-  G("link", h(E.Button, { variant: "link", href: "#" }, "Learn About ETA")),
+  G("link", h(E.Button, { variant: "link", href: "#" }, "Learn more")),
   G("inverse", set("inverse", "Get started")),
-  G("onDark, on band-dark", h("div", { className: "band row" }, set("onDark", "Explore our services")))
+  G("onDark, on band-dark", h("div", { className: "band row" }, set("onDark", "See how we work")))
 ));
 </script>
 </body></html>

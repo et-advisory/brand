@@ -80,9 +80,9 @@ Emerald text (`text-primary`, `text-eta-accent`) resolves to `accent-strong`; Em
   const { Logo, SectionHeading, Button, ServiceRow } = window.ETA, h = React.createElement;
   ReactDOM.createRoot(document.getElementById("app")).render(h("div", null,
     h(Logo, { variant: "horizontal", width: 200 }),
-    h(SectionHeading, { eyebrow: "Capital formation", title: "Tokenization is the instrument.", lead: "The deliverable is a closed raise." }),
+    h(SectionHeading, { eyebrow: "Capital formation", title: "Raise capital on the asset you already own.", lead: "We stay with you until the raise closes." }),
     h(ServiceRow),
-    h(Button, { variant: "primary", size: 48, href: "/contact" }, "Initiate Contact")
+    h(Button, { variant: "primary", size: 48, href: "/contact" }, "Talk with our team")
   ));
 </script>
 ```
