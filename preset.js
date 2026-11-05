@@ -56,6 +56,7 @@ export default {
       fontFamily: { sans: ["var(--font-sans)"], serif: ["var(--font-serif)"], mono: ["var(--font-mono)"] },
       fontSize: {
         "2xs": ["10px", { lineHeight: "14px" }],
+        cinema: ["clamp(48px, 5vw + 1.5rem, 112px)", { lineHeight: "1", letterSpacing: "-0.04em", fontWeight: "900" }],
         eyebrow: ["12px", { lineHeight: "1.2", letterSpacing: "0.18em", fontWeight: "600" }],
       },
       colors: {

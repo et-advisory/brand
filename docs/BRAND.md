@@ -95,7 +95,7 @@ Carried over from Evolution 12 and not on the 13 board: Forest `#244B3E` (`fores
 
 ## Visual foundations
 
-- **Type.** `Inter` for everything (800 to 900 on headlines, 600 on labels, 400 and 500 for body and data). `Instrument Serif` appears only for the principle glyphs. The `mono` token stays in the file as the data role and resolves to Inter.
+- **Type.** `Inter` for everything (800 to 900 on headlines, 600 on labels, 400 and 500 for body and data). `Instrument Serif` appears only for the principle glyphs. The `cinema` step (`clamp(48px, 5vw + 1.5rem, 112px)`, 900, −0.04em) is the one size above `display`, used once per page for a full-bleed hero statement; chapter statements use `display`. The `mono` token stays in the file as the data role and resolves to Inter.
 - **Slides.** 1920x1080, `margin-slide` 128px, eyebrow in `slide-label` uppercase with wide tracking, `slide-cover` or `slide-title` headline, 24px footer row at 64px from the bottom in `ink-faint`.
 - **Statement slides** use `band-dark` (Obsidian) as the ground with `on-band-dark` type and the reversed mark. One per deck section at most.
 - **Radius.** `radius-lg` cards, `radius-md` buttons, `radius-pill` badges and tags.

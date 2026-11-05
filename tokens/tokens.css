@@ -175,6 +175,7 @@
 }
 
 /* Type styles */
+.t-cinema { font-family: var(--font-sans); font-size: clamp(48px, 5vw + 1.5rem, 112px); line-height: 1; font-weight: 900; letter-spacing: -0.04em; }
 .t-display { font-family: var(--font-sans); font-size: 72px; line-height: 1.05; font-weight: 900; letter-spacing: -0.03em; }
 .t-h1 { font-family: var(--font-sans); font-size: 48px; line-height: 1.08; font-weight: 900; letter-spacing: -0.02em; }
 .t-h2 { font-family: var(--font-sans); font-size: 36px; line-height: 1.1; font-weight: 900; letter-spacing: -0.02em; }
