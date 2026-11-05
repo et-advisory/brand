@@ -18,7 +18,7 @@ const listVars = (fam) => (t[fam]?.tokens ?? []).map((tok) => `  --${tok.name}: 
 const fontVars = Object.entries(t.type.families).map(([k, v]) => `  --font-${k}: ${v};`).join("\n");
 
 let css = `/* ${t.name} — generated from tokens/tokens.json by scripts/build-tokens.mjs. Do not edit by hand. */\n\n`;
-css += `:root {\n${colorVars(first)}\n\n${listVars("spacing")}\n\n${listVars("radius")}\n\n${fontVars}\n}\n`;
+css += `:root {\n${colorVars(first)}\n\n${listVars("spacing")}\n\n${listVars("radius")}\n\n${listVars("motion")}\n\n${fontVars}\n}\n`;
 for (const theme of others) {
   css += `\n@media (prefers-color-scheme: ${theme}) {\n  :root:not([data-theme="${first}"]) {\n${colorVars(theme).replace(/^/gm, "  ")}\n  }\n}\n`;
   css += `\n:root[data-theme="${theme}"] {\n${colorVars(theme)}\n}\n`;

@@ -134,6 +134,12 @@ export default {
         primary: { DEFAULT: c("accent-strong") },
         eta: { accent: c("accent-strong") },
       },
+      transitionTimingFunction: {
+        DEFAULT: "var(--ease-out)",
+        out: "var(--ease-out)",
+        soft: "var(--ease-soft)",
+        io: "var(--ease-io)",
+      },
       borderRadius: {
         lg: "var(--radius-lg)",
         md: "var(--radius-md)",

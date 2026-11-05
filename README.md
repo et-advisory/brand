@@ -10,8 +10,8 @@ ET Advisory helps founders and asset owners close capital raises, with a focus o
 
 | Path | What |
 | --- | --- |
-| `docs/BRAND.md` | The brand book: principles, voice, visual foundations, logo rules, iconography. Start here. |
-| `tokens/tokens.json` | Source of truth: colors in light and dark themes, type scale, spacing, radius, each with a usage note. |
+| `docs/BRAND.md` | The brand book: principles, voice, visual foundations, motion, logo rules, iconography. Start here. |
+| `tokens/tokens.json` | Source of truth: colors in light and dark themes, type scale, spacing, radius, motion curves, each with a usage note. |
 | `tokens/tokens.css` | Generated CSS custom properties and `.t-*` type classes. Do not edit by hand. |
 | `logos/` | SVG logo files, PNG exports and a 512px app icon, all outlined paths. Usage notes in `logos/README.md`. |
 | `components/bundle.js` | The live components: one classic script that sets `window.ETA`. Styled by `components/bundle.css`, typed in `components/index.d.ts`. |
@@ -65,7 +65,7 @@ import brand from "@et-advisory/brand/preset";
 export default { presets: [brand], content: ["./src/**/*.{ts,tsx}"] };
 ```
 
-Emerald text (`text-primary`, `text-eta-accent`) resolves to `accent-strong`; Emerald fills resolve to `accent-fill`. `accent` is shadcn's hover and highlight fill (Line), not Emerald. Dark styles (`dark:`) follow the same switch as `tokens.css`: the OS scheme, unless `data-theme` on `<html>` pins one. `eta-digital`, `eta-sapphire`, `eta-emerald`, `eta-ruby`, `eta-white`, `eta-obsidian`, `eta-silver` and `eta-gold-canon` carry the canon swatches.
+Emerald text (`text-primary`, `text-eta-accent`) resolves to `accent-strong`; Emerald fills resolve to `accent-fill`. `accent` is shadcn's hover and highlight fill (Line), not Emerald. Dark styles (`dark:`) follow the same switch as `tokens.css`: the OS scheme, unless `data-theme` on `<html>` pins one. `eta-digital`, `eta-sapphire`, `eta-emerald`, `eta-ruby`, `eta-white`, `eta-obsidian`, `eta-silver` and `eta-gold-canon` carry the canon swatches. `ease-soft`, `ease-io` and `ease-out` are the motion curves, and `ease-out` is also the default for a bare `transition`.
 
 ## Using the components
 

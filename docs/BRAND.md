@@ -102,6 +102,42 @@ Carried over from Evolution 12 and not on the 13 board: Forest `#244B3E` (`fores
 - **Scene grounds.** Four licence-free aerials in `assets/scenes/` (land, properties, resources, utilities; credits and licences in `assets/scenes/CREDITS.md`) are the photographic grounds behind the site's story scenes. One treatment for all: `saturate(.45) brightness(.6)`, an Obsidian gradient solid behind the copy column, the grid field on top, no grain. Line drawings sit over them, never under text.
 - **Open decisions.** Base spacing unit (4px here, 8px in the Style Guide). The business card, banner and booklet on the board are direction, not final art. Whether Emerald stays the interface accent now that the 13 board sets numerals, rules and token squares in gold. Whether Forest, Sage and Paper are retired. The tagline wording (the board prints value, Erik's ruling is actuality). Whether the silver, obsidian and wireframe marks are drawn.
 
+## Motion
+
+Native only: CSS transitions, scroll and view timelines and View Transitions, with no GSAP, Lenis or barba. Motion follows the reader's scroll position and never takes the wheel, keys or touch away: pinned chapters are sticky stages driven by position at any speed, with no scroll takeover and no scroll snap. Every page is complete with motion off.
+
+**Curves.** `tokens.json` `motion`, exposed by the preset as `ease-soft`, `ease-io` and `ease-out`; `ease-out` is also Tailwind's default curve.
+
+| Token | Value | Use |
+| --- | --- | --- |
+| `--ease-soft` | `cubic-bezier(.16,1,.3,1)` | Entrances: words, leads and panels rising in, image hover |
+| `--ease-io` | `cubic-bezier(.77,0,.175,1)` | Moving between places: leaving the gate, the plate morph, the hero cue |
+| `--ease-out` | `cubic-bezier(.23,1,.32,1)` | State: hover colour, copy flips, crossfades, line draws, the track switch |
+| `linear` | | Anything on a scroll or view timeline, where position is the easing |
+
+**Durations.** There are no duration tokens; these are the values.
+
+| Duration | Use |
+| --- | --- |
+| 150ms | Hover colour |
+| 300ms | State changes and crossfades |
+| 400ms | Line draw (fixed) |
+| 700ms | Entrances, leaving the gate, the plate morph |
+| 900ms | Hero word rise |
+| 1200ms | Image hover, scaling to 1.03 |
+
+Ambient loops are slow: a 32s plate drift, a 90s marquee and a 70s ticker. Marquees pause on hover and on keyboard focus.
+
+**Choreography.**
+- The vocabulary is closed: word-mask rise, one-shot odometer, line draw, a statement that brightens word by word, items rising into view and a section hairline that draws in. No surface adds a reveal beyond these.
+- Hero entrance: word masks run 900ms on `ease-soft` with a 55ms stagger capped at six words; the lead and actions follow from 480ms, and the entrance ends by about 1.35s. The scroll cue breathes three times, then stops.
+- Gate to hero: the chosen door's photograph morphs into the hero plate over 700ms on `ease-io`, through a shared `view-transition-name`.
+- Chapters fade up from Obsidian on a view timeline as they enter, and never fade out, so the end frame is always the finished plate.
+- On position: the hero parallax (7% over the first 120svh), the chapter fade, scene crossfades inside a pinned chapter and the gold scroll line. On time: the hero entrance, the morph, line draws, odometers and marquees.
+- A "Learn more" chevron moves 2px right on hover over 150ms.
+
+**Reduced motion.** The rest state is the design. Plates are still, headings sit at full opacity, copy and scene layers switch with no transition, drawings appear fully drawn, marquees become static wrapped lists and view transitions cut. The scroll line still reports position. Every moving rule sits under `prefers-reduced-motion: no-preference`, an `@supports` guard, or both.
+
 ## Components
 
 The components are live React parts in the `ETA` namespace (`components/bundle.js`, styled by `components/bundle.css`, typed in `components/index.d.ts`): `ETA.Logo`, `ETA.Button`, `ETA.Badge`, `ETA.StatusChip`, `ETA.Card` with `ETA.CardFooter` (the footer carries provenance: a source line, a credit, the links behind a figure), `ETA.Gallery` (a list of 2 to 4 cards per row, each row one height), `ETA.StatTile` with `ETA.StatRow`, `ETA.ServiceCard` with `ETA.ServiceRow`, `ETA.Eyebrow` and `ETA.SectionHeading`. Use them rather than re-creating their markup. `Cover` shows the palette. `Button` has seven variants (`primary`, `secondary`, `outline`, `ghost`, `link`, `inverse`, `onDark`) at 32, 40 and 48px. `Badge` (neutral, accent, gold) and `StatusChip` carry tone with a word. `StatTile` is a big numeral over a label and source. `ServiceCard` is always exactly three, numbered 01 to 03. `Eyebrow` and `SectionHeading` open every section. `Logo` draws the mark and lockups from the same data as the SVG files and switches theme on its own. `BrandApplications` and `BrandCanon` are static reference layouts, not components: the first shows business card, email signature, social avatar and banner; the second shows the Evolution 12 tagline plate, palette, principles, flow, asset scope and graphic language.
