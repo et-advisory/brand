@@ -9,14 +9,16 @@ ET Advisory (ETA) helps founders and asset owners close capital raises, with a f
 | Element | Canon |
 | --- | --- |
 | Tagline | PHYSICAL ACTUALITY. DIGITAL POSSIBILITY. Wide-tracked caps, white on an `obsidian` plate. The Evolution 12 and 13 boards both print "physical value"; Erik set "physical actuality" on 2026-10-14 and that wording governs until he rules otherwise on the 13 board. |
-| Campaign line | A new market for the real world. Heavy Inter, `ink`, with the supporting line "The world is physical. Its next chapter is digital." beneath it in `ink-muted`. |
-| Story line | Real-world assets. In the palm of your hand. |
-| Story body | Land. Properties. Utilities. Resources. The world's value, connected to new ways of owning and exchanging it. |
-| Our role | ETA connects physical assets, digital records and the rights people can hold. |
-| Sign-off pair | Make the future clear. Build for the long term. |
-| Builder line | ETA builds the connection. Asset, Twin, Rights, Market. |
-| Booklet line | The real world. In your hands. |
+| Campaign line | A new market for the real world. Heavy Inter, `ink`, with the supporting line "Ownership is going online, just as information did." beneath it in `ink-muted`. |
+| Story line | Own a share of something real, right from the palm of your hand. |
+| Story body | Land, properties, utilities and resources hold much of the world's value, and now you can own a share of them and trade it as easily as anything else online. |
+| Our role | We connect the asset you own to a clear digital record and the rights your investors can hold. |
+| Sign-off | We'll make what comes next clear, and build it to last. |
+| Builder line | We connect your asset to its digital twin, the rights it carries and the market that wants them. The panel's four icons keep their labels: Asset, Twin, Rights, Market. |
+| Booklet line | Put a piece of the real world in your hands. |
 | Running header and footer | `ETA / BRAND EVOLUTION 13` and `ETA / PROPOSED BRAND SYSTEM`, with the campaign line right-aligned in the footer and "Design direction for review." beneath it. Section labels are wide-tracked caps with a short gold rule beneath. |
+
+The tagline and the three principle names (ε Exactness, τ Totality, α Alignment) are fixed marks and are never rewritten. Every other line here follows the voice in Content fundamentals.
 
 **Palette.** Seven canon swatches, all printed with their hex on the Evolution 13 board. Use the token, never the hex. The roles of White, Obsidian, Silver and Gold are read from how the board uses them.
 
@@ -57,9 +59,9 @@ Carried over from Evolution 12 and not on the 13 board: Forest `#244B3E` (`fores
 
 | Idea | Drawing | Caption |
 | --- | --- | --- |
-| Measure | A parcel polygon with measurement points | Keep the facts. |
-| Represent | A parcel turning into a 3 by 3 grid of squares (gold on Obsidian, `digital` on White) | Define the rights. |
-| Connect | A phone showing the parcel, linked to person nodes | Open the connection. |
+| Measure | A parcel polygon with measurement points | Every fact about your asset, kept in one place. |
+| Represent | A parcel turning into a 3 by 3 grid of squares (gold on Obsidian, `digital` on White) | Rights spelled out before the first investor arrives. |
+| Connect | A phone showing the parcel, linked to person nodes | A direct line to the people who want to take part. |
 
 **Material and form.** The board's Material / Form strip and the four reference sheets set a stone-and-metal world, and the sheets list it in twenty categories each:
 - Surfaces: white and black marble with gold veining, brushed and polished silver, brass and gold, obsidian, foil, glass, paper and ceramic.
@@ -74,7 +76,7 @@ Carried over from Evolution 12 and not on the 13 board: Forest `#244B3E` (`fores
 
 **Mark treatments.** The sheets show the mark in four treatments: full-color crystal, a silver metallic tetrahedron, an obsidian tetrahedron and a wireframe tetrahedron drawn in thin line inside circles. Only full color, reversed and one-color files exist in the Logos group; the silver, obsidian and wireframe versions are direction and are not drawn yet.
 
-**Applications.** Four on the board: the business card (white marble front with the lockup and gold hairlines; `obsidian` back with the campaign line in white, gold diagonal lines and a 3 by 3 grid of gold outlined squares), a wide banner pairing the campaign line with the globe and column photograph on white, an `obsidian` panel carrying the builder line with four gold line icons (Asset, Twin, Rights, Market), and a booklet cover in Obsidian reading "The real world. In your hands." over an aerial map network, beside a phone showing Asset overview (Location, Rights, Records). `BrandApplications` and `BrandCanon` hold the reference layouts.
+**Applications.** Four on the board: the business card (white marble front with the lockup and gold hairlines; `obsidian` back with the campaign line in white, gold diagonal lines and a 3 by 3 grid of gold outlined squares), a wide banner pairing the campaign line with the globe and column photograph on white, an `obsidian` panel carrying the builder line with four gold line icons (Asset, Twin, Rights, Market), and a booklet cover in Obsidian reading "Put a piece of the real world in your hands." over an aerial map network, beside a phone showing Asset overview (Location, Rights, Records). `BrandApplications` and `BrandCanon` hold the reference layouts.
 
 ## Principles
 

@@ -8,6 +8,6 @@ BrandApplications shows the logo at work on the business card, email signature, 
 
 **Email signature**: the mark at 44px, a `line` divider, name in `ink` 700, title and firm in `ink-muted`, the domain in `accent-strong` mono. Export the mark as PNG at 2x (`eta-mark.png`) for mail clients that block SVG.
 
-**Social**: the avatar is `eta-app-icon` or the reversed mark on `band-dark` in a circle, nudged up a few percent so its visual weight, which sits low in a triangle, lands on the circle's center. The banner is `band-dark` with one large cropped reversed mark at low strength and the story line (Real-world assets. In the palm of your hand.) in `on-band-dark`.
+**Social**: the avatar is `eta-app-icon` or the reversed mark on `band-dark` in a circle, nudged up a few percent so its visual weight, which sits low in a triangle, lands on the circle's center. The banner is `band-dark` with one large cropped reversed mark at low strength and the story line (Own a share of something real, right from the palm of your hand.) in `on-band-dark`.
 
-**Booklet cover**: `band-dark`, the reversed lockup top-left and The real world. In your hands. bottom-left. The board adds an aerial parcel map and a phone showing Asset overview (Location, Rights, Records); supply the imagery.
+**Booklet cover**: `band-dark`, the reversed lockup top-left and the booklet line (Put a piece of the real world in your hands.) bottom-left. The board adds an aerial parcel map and a phone showing Asset overview (Location, Rights, Records); supply the imagery.
