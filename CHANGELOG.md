@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.0.1 (2026-11-05)
+
+- Canon lines: the campaign line "A new market for the real world." is rewritten as "Now the real world has a market of its own.", completing the 4.0.0 voice rewrite. The business card back and the BrandCanon and BrandApplications previews follow. Printed cards and material that quote the old line are out of date.
+
 ## 4.0.0 (2026-11-05)
 
 The owner's new brand direction: an Apple-style voice, a second, brighter photo treatment, motion tokens and Sapphire as the AI track's accent.
