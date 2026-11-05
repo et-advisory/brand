@@ -56,6 +56,12 @@ const pairs = [
   ["danger", "danger-bg", TEXT],
   ["eta-status-info-fg", "eta-status-info", TEXT],
   ["eta-status-planned-fg", "eta-status-planned", TEXT],
+  // The AI track's accent set: links and small text on light grounds, the hover fill, chips.
+  ["eta-sapphire-strong", "background", TEXT],
+  ["eta-sapphire-strong", "muted", TEXT],
+  ["eta-sapphire-strong", "card", TEXT],
+  ["eta-sapphire-strong", "eta-sapphire-tint", TEXT],
+  ["primary-foreground", "eta-sapphire-strong", TEXT],
   ["sidebar-foreground", "sidebar", TEXT],
   ["sidebar-primary-foreground", "sidebar-primary", TEXT],
   ["sidebar-accent-foreground", "sidebar-accent", TEXT],

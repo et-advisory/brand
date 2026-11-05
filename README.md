@@ -45,7 +45,7 @@ The dark theme follows `prefers-color-scheme`. To force a theme, set `data-theme
 Key contrast rules (full detail in the brand book):
 
 - Small white text sits on `accent-fill` (6.91:1); since Evolution 12 `accent` equals it.
-- Text under 24px in Emerald uses `accent-strong`. `digital` (Sapphire) marks only tokens, rights and principle numerals.
+- Text under 24px in Emerald uses `accent-strong`. `digital` (Sapphire) marks tokens, rights and principle numerals. On the AI track Sapphire is the accent: `sapphire-strong` for small text and links, `sapphire-tint` for chips, and `mark-reversed-mid` for Sapphire on `band-dark`.
 - `band-dark` is a background that stays dark in both themes; text on it is `on-band-dark` or `on-band-dark-muted`.
 - `ruby` appears only in the mark. `gold` never sits beside the three-color mark.
 
@@ -65,7 +65,7 @@ import brand from "@et-advisory/brand/preset";
 export default { presets: [brand], content: ["./src/**/*.{ts,tsx}"] };
 ```
 
-Emerald text (`text-primary`, `text-eta-accent`) resolves to `accent-strong`; Emerald fills resolve to `accent-fill`. `accent` is shadcn's hover and highlight fill (Line), not Emerald. Dark styles (`dark:`) follow the same switch as `tokens.css`: the OS scheme, unless `data-theme` on `<html>` pins one. `eta-digital`, `eta-sapphire`, `eta-emerald`, `eta-ruby`, `eta-white`, `eta-obsidian`, `eta-silver` and `eta-gold-canon` carry the canon swatches. `ease-soft`, `ease-io` and `ease-out` are the motion curves, and `ease-out` is also the default for a bare `transition`.
+Emerald text (`text-primary`, `text-eta-accent`) resolves to `accent-strong`; Emerald fills resolve to `accent-fill`. `accent` is shadcn's hover and highlight fill (Line), not Emerald. Dark styles (`dark:`) follow the same switch as `tokens.css`: the OS scheme, unless `data-theme` on `<html>` pins one. `eta-digital`, `eta-sapphire`, `eta-emerald`, `eta-ruby`, `eta-white`, `eta-obsidian`, `eta-silver` and `eta-gold-canon` carry the canon swatches, and `eta-sapphire-strong` and `eta-sapphire-tint` the AI track's accent set. `ease-soft`, `ease-io` and `ease-out` are the motion curves, and `ease-out` is also the default for a bare `transition`.
 
 ## Using the components
 

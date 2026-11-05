@@ -109,6 +109,8 @@ export default {
           gold: c("gold"),
           digital: c("digital"),
           sapphire: c("sapphire"),
+          "sapphire-strong": c("sapphire-strong"),
+          "sapphire-tint": c("sapphire-tint"),
           emerald: c("emerald"),
           ruby: c("ruby"),
           forest: c("forest"),
