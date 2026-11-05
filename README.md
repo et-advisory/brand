@@ -4,7 +4,7 @@ The brand system for ET Advisory (ETA): design tokens, logo files, component ref
 
 ET Advisory helps founders and asset owners close capital raises, with a focus on real-world asset tokenization. The look is confident, bright and precise: warm paper, near-black ink, Emerald as the interface accent, Obsidian as the dark ground, Sapphire for the digital layer, Silver and Gold as metals, heavy Inter headlines.
 
-> **Canon.** Brand Evolution 13 (2026-10-14) replaces the Royal Blue direction. The mark is a three-face crystal: Ruby left, Sapphire right, Emerald bottom.
+> **Canon.** Brand Evolution 13 (2026-10-14) replaces the Royal Blue direction. The mark is a three-face crystal: Ruby left, Sapphire right, Emerald bottom. Since 4.0.0 the voice is Apple-style (one idea per headline, about the reader), photographs take one of two treatments (plate or ground), motion has its own curves, and Sapphire is the AI track's accent.
 
 ## What is here
 

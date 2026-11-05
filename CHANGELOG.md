@@ -1,5 +1,26 @@
 # Changelog
 
+## 4.0.0 (2026-11-05)
+
+The owner's new brand direction: an Apple-style voice, a second, brighter photo treatment, motion tokens and Sapphire as the AI track's accent.
+
+- Tokens: added the motion curves `--ease-soft` `cubic-bezier(.16,1,.3,1)`, `--ease-io` `cubic-bezier(.77,0,.175,1)` and `--ease-out` `cubic-bezier(.23,1,.32,1)` (`tokens.json` `motion`, emitted into `:root`).
+- Tokens: added `sapphire-strong` (#10306C, 12.13:1 on paper) and `sapphire-tint` (#EAEEF4, `sapphire-strong` on it 10.86:1), the AI track's accent set. The dark values (#7AA2F2, #142341) are derived. Sapphire on Obsidian reuses `mark-reversed-mid`; there is no new token for it.
+- Tokens: added the `cinema` type step, `clamp(48px, 5vw + 1.5rem, 112px)` / 1 / −0.04em / 900, once per page for a full-bleed hero (`.t-cinema`).
+- Preset: `ease-soft`, `ease-io` and `ease-out` timing classes; `ease-out` is also the default for a bare `transition`. Added `text-cinema`, `eta-sapphire-strong` and `eta-sapphire-tint`.
+- `check.mjs` gates the Sapphire pairs (on paper, surface, card and the tint, and white on `sapphire-strong`) in both themes; every pair passes.
+- Brand book: a Motion section (curves, durations, choreography, the reduced-motion rest state); the AI accent rule; the `cinema` step.
+- Photography: two treatments, plate `saturate(.9) brightness(.95)` and ground `saturate(.45) brightness(.6) contrast(1.05)`. Photography that belongs to one site may live in that site's repo with its credits.
+- Voice: Apple-style rules replace the canon voice: one idea per headline as a full thought about the reader, benefit first, conversational leads, banned abstractions and shapes, wordplay on story pages only. Verb-led calls to action with Talk with our team as the primary. Button and SectionHeading guidelines and previews follow.
+- Canon lines: the story line, story body, our-role line, sign-off, builder line, booklet line, the campaign's supporting line and the three drawing captions are rewritten in the new voice. The tagline plate and ε Exactness, τ Totality, α Alignment are unchanged.
+
+Breaking:
+
+- Voice. Short declaratives in pairs, "Lead with the claim" headlines and the fixed CTA list (Initiate Contact, Explore our services, Learn About ETA) are retired. Copy written to the 3.x rules needs a rewrite.
+- Canon lines. Every canon line except the tagline and the principle names has new wording; material that quotes the story, sign-off, builder or booklet lines or the drawing captions is out of date.
+- Photo treatment. The single scene treatment `saturate(.45) brightness(.6)` is now the ground treatment with `contrast(1.05)`, and heroes and chapters may take the brighter plate instead.
+- Preset: a bare `transition` and `ease-out` now use `--ease-out` (`cubic-bezier(.23,1,.32,1)`) instead of Tailwind's `cubic-bezier(.4,0,.2,1)` and `cubic-bezier(0,0,.2,1)`. Timings are unchanged; the curve is snappier at the start.
+
 ## 3.3.0 (2026-10-21)
 
 - Preset: shadcn/ui theme. `accent` is the subtle hover and highlight fill (Line on Ink) that shadcn menus, selects, command lists and ghost buttons use; it was a solid Emerald fill, so those turned green on hover. Use `primary` for Emerald fills.
